@@ -2103,7 +2103,7 @@
 				}
 
 				ul.feature-icons li:before {
-					background: #4acaa8;
+					background: #cd5c5c;
 					border-radius: 100%;
 					color: #ffffff;
 					display: block;
@@ -2474,7 +2474,7 @@
 		justify-content: space-between;
 		/*background: #4acaa8;*/
 		background: #cd5c5c;
-		color: #d1f1e9;
+		color: #cd5c5c;
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
@@ -2497,7 +2497,7 @@
 		}
 
 		#header a {
-			color: #d1f1e9;
+			color: #cd5c5c;
 		}
 
 			#header a:hover {
@@ -2861,7 +2861,7 @@
 					}
 
 					#titleBar .toggle:before {
-						background: #4acaa8;
+						background: #cd5c5c;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
