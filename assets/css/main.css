@@ -1574,7 +1574,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #0000FF !important;
+			color: #cd5c5c !important;
 		}
 
 	strong, b {
@@ -1591,7 +1591,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #777;
+		color: #cd5c5c;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
@@ -1734,7 +1734,7 @@
 	}
 
 	header.major h2 {
-		color: #696969;
+		color: #cd5c5c;
 		font-size: 3.5em;
 	}
 
@@ -2473,7 +2473,7 @@
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		/*background: #4acaa8;*/
-		background: #696969;
+		background: #cd5c5c;
 		color: #d1f1e9;
 		height: 100%;
 		overflow-y: auto;
@@ -2493,7 +2493,7 @@
 			}
 
 		#header header p {
-			color: #b6e9dc;
+			color: #ffffff;
 		}
 
 		#header a {
@@ -2524,8 +2524,8 @@
 			}
 
 			#header > header p {
-				color: #d1f1e9;
-				font-style: italic;
+				color: #ffffff;
+				/*font-style: italic;*/
 				margin: 1em 0 0 0;
 			}
 
@@ -2545,7 +2545,7 @@
 			}
 
 				#header > footer .icons li a {
-					color: #b6e9dc;
+					color: #ffffff;
 				}
 
 		#header > nav {
@@ -2562,7 +2562,7 @@
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #696969;
+					border-top: solid 2px #cd5c5c;
 					display: block;
 					padding: 0;
 				}
@@ -2582,7 +2582,7 @@
 						#header > nav ul li a.active {
 							background: #fff;
 							/* color: #4acaa8 !important;*/
-							color: #696969 !important;
+							color: #cd5c5c !important;
 						}
 
 					#header > nav ul li:first-child {
