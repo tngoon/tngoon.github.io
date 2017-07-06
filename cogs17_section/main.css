@@ -6,7 +6,6 @@ h1, li, h2, h3, h4, p {
 	padding-left: 50px;
 	height: 700px;
 	top: 0%;
-
 }
 
 #headerinfo {
@@ -15,4 +14,8 @@ h1, li, h2, h3, h4, p {
 
 #section-slides {
 	padding-left: 200px;
+}
+
+.redtext {
+	color:#8B0000;
 }
