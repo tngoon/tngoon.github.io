@@ -1,0 +1,108 @@
+html, div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline
+}
+
+h1 {
+	font-family: Arial;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+h2 {
+	font-family: Arial;
+	font-size: 14px;
+}
+
+h3 {
+	font-family: Arial;
+	font-size: 14px;
+}
+
+p {
+	font-family: Arial;
+	font-size: 12px
+}
+
+textarea {
+	width: 95%;
+	font-family: Arial;
+}
+
+#sidebar {
+	background-color: #D3D3D3;
+	padding: 10px;
+	position: absolute;
+	right: 0px;
+	width: 400px;
+	height: 1200px;
+}
+
+#scroll-box {
+	border: none;
+	background-color: #D3D3D3;
+	padding: 5px;
+	height: 300px;
+	width: 95%;
+	overflow: scroll;
+}
+
+#navbar {
+	padding-top: 5px;
+	padding-left: 10px;
+	background-color: #000000;
+	height: 50px;
+	width: 105% ;
+}
+
+#indicators {
+	font-family: Arial;
+	font-size: 12px;
+}
+
+#complete-comment {
+	color: #006400;
+}
+/*#navbar a{
+	text-align: right;
+	color: #00CED1;
+}*/
+#submit-comment {
+	background-color: #F08080;
+}
+
+#submit-comment:hover {
+	color: #ffffff;
+}
+
+#cancel-comment:hover {
+	color: #ffffff;
+	background-color: #696969;
+}
+
+.suggest-btn {
+	width: 95%;
+}
+
+.suggest-btn:hover {
+	background-color: #696969;
+	color: #ffffff;
+}
+
+.comment-btns {
+	float: right;
+	margin-left: 5px;
+}
+
+.text-right {
+	float: right;
+	color: #ffffff;
+}
+
+.need-suggestion {
+	color: #8B0000;
+}
