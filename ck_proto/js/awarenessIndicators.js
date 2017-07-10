@@ -43,9 +43,8 @@ function ShowHideDiv() {
 		needspec.style.display = "block";
 		submit.style.backgroundColor = "#F0E68C";
 	} else if(poscheck.checked && speccheck.checked) {
-		opendefault.style.display = "none";
+		// opendefault.style.display = "block";
 		needspec.style.display = "none";
-		complete.style.display = "block";
 		submit.style.backgroundColor = "#90EE90"
 	} else if(speccheck.checked){
 		needspec.style.display = "none";

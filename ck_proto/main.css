@@ -33,13 +33,19 @@ textarea {
 	font-family: Arial;
 }
 
+iframe {
+	float: left;
+	width: 67%;
+	height: 1000px;
+}
+
 #sidebar {
 	background-color: #D3D3D3;
 	padding: 10px;
 	position: absolute;
 	right: 0px;
 	width: 400px;
-	height: 1200px;
+	height: 1000px;
 }
 
 #scroll-box {
@@ -82,6 +88,16 @@ textarea {
 #cancel-comment:hover {
 	color: #ffffff;
 	background-color: #696969;
+}
+
+input.suggest-btn {
+	-moz-appearance: none;
+ 	-webkit-appearance: none;
+	appearance: none;
+	width: 95%;
+	white-space: normal;
+	/*height: 3em;*/
+	background-color: #A9A9A9;
 }
 
 .suggest-btn {
