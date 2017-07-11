@@ -13,7 +13,7 @@ h1, li, h2, h3, h4, p {
 }
 
 #content-box {
-	padding-left: 350px;
+	padding-left: 325px;
 	padding-right: 300px;
 	width: 75%;
 }
@@ -24,7 +24,7 @@ h1, li, h2, h3, h4, p {
 #content-box .column {
     float: left;
     margin: 0;
-    width: 33%;
+    width: 35%;
 }
 .redtext {
 	color:red;
