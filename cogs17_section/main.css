@@ -15,7 +15,7 @@ h1, li, h2, h3, h4, p {
 #content-box {
 	padding-left: 325px;
 	padding-right: 300px;
-	width: 75%;
+	width: 75%; 
 }
 /*#section-slides {
 	padding-left: 200px;
@@ -26,9 +26,9 @@ h1, li, h2, h3, h4, p {
     margin: 0;
     width: 35%;
 }
-.redtext {
+/*.redtext {
 	color:red;
-}
+}*/
 
 .column {
 	width: 25%;
