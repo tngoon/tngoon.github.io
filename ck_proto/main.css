@@ -35,7 +35,7 @@ textarea {
 
 iframe {
 	float: left;
-	width: 67%;
+	width: 70%;
 	height: 1000px;
 }
 
@@ -49,8 +49,8 @@ iframe {
 }
 
 #scroll-box {
-	border: none;
-	background-color: #D3D3D3;
+	border: solid black;
+	background-color: #FFFFFF;
 	padding: 5px;
 	height: 300px;
 	width: 95%;
@@ -97,11 +97,8 @@ input.suggest-btn {
 	width: 95%;
 	white-space: normal;
 	/*height: 3em;*/
-	background-color: #A9A9A9;
-}
+	background-color: #D3D3D3;
 
-.suggest-btn {
-	width: 95%;
 }
 
 .suggest-btn:hover {
