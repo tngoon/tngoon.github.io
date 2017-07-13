@@ -24,8 +24,7 @@
 	<div id="sidebar">
 		<h2>Feedback:</h2>
 		<div id="comments">
-			<textarea id='comment_text' placeholder='Type your feedback...' data-categorystring="">
-			</textarea>
+			<textarea id='comment_text' placeholder='Type your feedback...'></textarea>
 			<div id="indicators">
 				<input type="checkbox" id="poscheck" value="positive" onclick="ShowHideDiv()">Is Positive
 				<input type="checkbox" id="speccheck" value="specific" onclick="ShowHideDiv()">Is Specific
@@ -34,28 +33,40 @@
 			</div>
 		<hr width=100%>
 		</div>
+		<div id="complete" style="display:none">
+			<p id="complete-comment"><i>Your comment is complete!</i></p>
+		</div>
 		<div id="default-open">
-			<p class="need-suggestion"><i>Need some suggestions?</i></p>
+			<p class="need-suggestion" style="color: #000000"><i>Need some feedback suggestions?</i></p>
 			<div id="scroll-box">
 				<div class="base-suggestions">
-					<!-- <input type="radio" name="suggest" onclick="copyText()">Use a grid layout<br> -->
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Use a grid layout"><br><br>
+					<p style="font-size: 16px"><b> Problem:</b></p>
+
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The color contrast is rather stark."><br><br>
+
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Using sans-serif font for all items is a bit visually distracting."><br><br>
+
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Too many items in this navigation."><br><br>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Make sure the text is visible on the background"><br><br>
+					<p style="font-size: 16px"><b> Solution:</b></p>
+					
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Spread out items or use a 2-column layout."><br><br>
 
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Text should be more uniform for a cleaner look."><br><br>
 
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="There could be more visual hierarchy present"><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Keep images static"><br><br>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I don't like how after I begin scrolling, I lose access to the navigational links."><br><br>
 
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Make more efficient use of your white space"><br><br>
+
+					<p style="font-size: 16px"><b> Positive:</b></p>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Good simplistic interface design."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Overall, content on the site is clear."><br><br>
+
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like the header. It's very clear and easy to read."><br><br>
+
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The colors are very vibrant and work well."><br><br>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The colors are very vibrant and work well, which works beautifully to create a positive impact on perception of the brand."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Icons are not consistent throughout."><br><br>
 				</div>
 			</div>
 		</div>
@@ -65,17 +76,15 @@
 				<div id="base-suggestions">
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Lightening the image would make it feel more fresh, vibrant."><br><br>
 
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="keep the navigation static at top."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A very little grey background may help to show the divide between the different sections."><br><br>
 
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A little detail about what to expect in this restaurant and what that food term means could be useful."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A suggestion would be to keep the bottom arrows of the image and have a 'dot carousel' instead."><br><br>
+
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A little detail about what to expect in this restaurant could be useful."><br><br>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Reduce the size of the image so you can place more important info up at the top."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Make sure text over images readable by changing the color perhaps."><br><br>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="One way I think this would look cleaner would be to reduce the spacing between the pictures (and keep it constant between each picture as opposed to between the grid cells)."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Perhaps the 2 items that have a cost associated to it should be placed at the top of the 2 columns."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I feel like the contact section should be included at the end of the page, not in between the about section and menu. "><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Maybe shift the menu items so the logo has space"><br><br>
 					
 				</div>
 			</div>
@@ -84,15 +93,13 @@
 			<p class="need-suggestion"><i>Your comment should also identify a <b>problem</b>. Need some suggestions?</i></p>
 			<div id="scroll-box">
 				<div class="base-suggestions">
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I'm a little confused by the placement of these pictures? It seems a little inconsistent with how most of the other pictures are being kept in the background."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The items seem cramped in this 3-column layout."><br><br>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The menu isn't very prominent, which seems like a wasted opportunity."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The hover functionality is distracting."><br><br>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I was expecting the header to follow as I scrolled."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I don't like how the navigation follows the rest of the site as the user scrolls down."><br><br>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="However, there could be a lot more color used, and the rest of the site does look a bit bland without that additional branding."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The footer looks almost like it didn't load correctly due to all the extra space."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The top is a little busy. It makes navigating away from this page a little difficult"><br><br>
 				</div>
 			</div>
 		</div>
@@ -100,23 +107,21 @@
 			<p class="need-suggestion"><i>Your comment should be <b>more specific</b>. Need some suggestions?</i></p>
 			<div id="scroll-box">
 				<div class="base-suggestions">
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Important information is easily found"><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Good job conveying important information"><br><br>
 					
-					<input type ="button" onclick="copyText(this)" class="suggest-btn" value="I like how there is a button to jump straight to the menu."><br><br>
+					<input type ="button" onclick="copyText(this)" class="suggest-btn" value="The large white gap at the bottom right is wasted."><br><br>
 
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like the inviting and appealing picture of that shows up first."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like the inviting and appealing picture shows up first."><br><br>
 					
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Love overall layout and the specific thought towards your audience"><br><br>
 					
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like how the text pops out in front of the pictures. It makes it visually appealing while also allowing the headers to stand out."><br><br>
 					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like the combination of food background pictures and information box when scrolling"><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The menu layout area looks bland and monotonous"><br><br>
 				</div>
 			</div>
 		</div>
-		<div id="complete" style="display:none">
-			<p id="complete-comment"><i>Your comment is complete!</i></p>
-		</div>
+		
 		<hr width=100%>
 		<div class="comment-btns">
 			<button type="button" id="cancel-comment" onClick="window.location.reload()">
@@ -125,6 +130,6 @@
 				<p>Submit</p></button>
 		</div>
 	</div>
-	<iframe src="https://www.pokirritosd.com/">
+	<iframe src="http://www.cottagelajolla.com/">
  </body>
 </html>

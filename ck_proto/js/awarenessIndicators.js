@@ -37,13 +37,14 @@ function ShowHideDiv() {
 		opendefault.style.display = "block";
 	}
 
-	if(poscheck.checked && !speccheck.checked) {
+	if(!speccheck.checked) {
 		opendefault.style.display = "none";
 		complete.style.display = "none";	
 		needspec.style.display = "block";
 		submit.style.backgroundColor = "#F0E68C";
 	} else if(poscheck.checked && speccheck.checked) {
-		// opendefault.style.display = "block";
+		complete.style.display = "block";
+		opendefault.style.display = "block";
 		needspec.style.display = "none";
 		submit.style.backgroundColor = "#90EE90"
 	} else if(speccheck.checked){
