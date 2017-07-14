@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html>
 <head>
 	<meta charset="utf-8">
@@ -9,17 +9,32 @@
     <!--<script src="clickSuggestions.js"></script>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!--<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+	<script>
+	var height = $('iframe').height()
+	$('#sidebar').height(height)
+	</script>
+	<!--// <script>
+	// $(document).ready(function() {
+	// 	$.getJSON("json/comments.json", function(obj) {
+	// 		$.each(obj.comments, function(key,value) {
+	// 			$("base-suggestions").append("<option>" + value.comment + "</option>");
+	// 		});
+	// 	}) ;
+	// });
+	</script>-->
 	<script src="js/awarenessIndicators.js"></script>
 	<script src="js/clickSuggestions.js"></script>
 	
 </head>
 <body>
+<!-- <div id="jumbotron">	
 	<div id="navbar">
 		<h1> CritiqueKit </h1>
-		<!-- <a href="#done">I'm done</a>
-		<a href="#help">Help</a> -->
+		<a href="#done">I'm done</a>
+		<a href="#help">Help</a>
 	</div>
-
+</div> -->
+<div id="container">
 	<div id="sidebar">
 		<h2>Feedback:</h2>
 		<div id="comments">
@@ -30,7 +45,6 @@
 				<input type="checkbox" id="probcheck" value="problem" onclick="ShowHideDiv()">Identifies Problem
 				<input type="checkbox" id="solcheck" value="solution" onclick="ShowHideDiv()">Provides Solution
 			</div>
-		<hr width=100%>
 		</div>
 		<div id="complete" style="display:none">
 			<p id="complete-comment"><i>Your comment is complete!</i></p>
@@ -124,7 +138,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<hr width=100%>
 		<div class="comment-btns">
 			<button type="button" id="cancel-comment" onClick="window.location.reload()">
@@ -133,6 +146,14 @@
 				<p>Submit</p></button>
 		</div>
 	</div>
-	<iframe src="http://www.cottagelajolla.com/">
+ <div id="jumbotron">	
+	<div id="navbar">
+		<h1> CritiqueKit </h1>
+		<!-- <a href="#done">I'm done</a>
+		<a href="#help">Help</a> -->
+ 	</div>
+ </div>
+ <iframe src="http://www.cottagelajolla.com/">		
+ </div>
  </body>
 </html>
