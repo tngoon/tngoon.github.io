@@ -43,7 +43,7 @@ textarea {
 	width: 98%;
 	font-family: Arial;
 	height: 40px;
-	margin: auto;
+	/*margin: auto;*/
 }
 
 iframe {
@@ -74,13 +74,6 @@ iframe {
 #container {
 	height: 100%;
 }
-#scroll-box {
-	background-color: #D3D3D3;
-	padding: 5px;
-	height: 300px;
-	width: 98%;
-	overflow: scroll;
-}
 
 #navbar {
 	padding-top: 5px;
@@ -103,12 +96,10 @@ iframe {
 	text-align: right;
 	color: #00CED1;
 }*/
-#submit-comment {
-	background-color: #F08080;
-}
 
-#submit-comment:hover {
-	color: #ffffff;
+#cancel-comment {
+	float: right;
+	margin-right: 5px;
 }
 
 #cancel-comment:hover {
@@ -116,10 +107,24 @@ iframe {
 	background-color: #696969;
 }
 
+#submit-comment {
+	background-color: #F08080;
+	float: right;
+	margin-right: 5px;
+}
+
+#submit-comment:hover {
+	color: #ffffff;
+}
+
 #warntext{
 	text-align: right;
 	font-size: 14px;
 	padding-top: 15px;
+}
+
+#base {
+	height: 100px;
 }
 
 input.suggest-btn {
@@ -141,11 +146,12 @@ input.suggest-btn {
 }
 
 .comment-btns {
-	float: right;
 	margin-left: 5px;
 	bottom: 15px;
 	right: 10px;
 	position: fixed;
+	width: 30%;
+	background-color: #D3D3D3;
 }
 
 .text-right {
@@ -157,4 +163,12 @@ input.suggest-btn {
 	color: #8B0000;
 	font-size: 16px;
 	/*font-weight: bold;*/
+}
+
+.scroll-box {
+	background-color: #D3D3D3;
+	padding: 5px;
+	height: 300px;
+	width: 98%;
+	overflow: scroll;
 }
