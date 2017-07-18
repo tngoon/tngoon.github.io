@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="main.css" />
     <!--<script src="clickSuggestions.js"></script>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
-	<script>
-	var height = $('iframe').height()
-	$('#sidebar').height(height)
-	</script>
+	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<!--// <script>
 	// $(document).ready(function() {
 	// 	$.getJSON("json/comments.json", function(obj) {
@@ -32,6 +28,7 @@
 		<h2>Feedback:</h2>
 		<div id="comments">
 			<textarea id='comment_text' placeholder='Type your feedback...'></textarea>
+			<p>Your comment should be...</p>
 			<div id="indicators">
 				<input type="checkbox" id="poscheck" value="positive" onclick="ShowHideDiv()">Is Specific
 				<input type="checkbox" id="speccheck" value="specific" onclick="ShowHideDiv()">Is Actionable
@@ -79,58 +76,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="need-solution" style="display:none">
-			<p class="need-suggestion"><i>Your comment should also provide a <b>solution</b>. Need some suggestions?</i></p>
-			<div id="scroll-box">
-				<div class="base-suggestions">
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Lightening the image would make it feel more fresh, vibrant."><br><br>
-
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A very little grey background may help to show the divide between the different sections."><br><br>
-
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A suggestion would be to keep the bottom arrows of the image and have a 'dot carousel' instead."><br><br>
-
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A little detail about what to expect in this restaurant could be useful."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Make sure text over images readable by changing the color perhaps."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Maybe shift the menu items so the logo has space"><br><br>
-					
-				</div>
-			</div>
-		</div>
-		<div id="need-problem" style="display:none">
-			<p class="need-suggestion"><i>Your comment should also identify a <b>problem</b>. Need some suggestions?</i></p>
-			<div id="scroll-box">
-				<div class="base-suggestions">
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The items seem cramped in this 3-column layout."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The hover functionality is distracting."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I don't like how the navigation follows the rest of the site as the user scrolls down."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The top is a little busy. It makes navigating away from this page a little difficult"><br><br>
-				</div>
-			</div>
-		</div>
-		<div id="need-specific" style="display:none">
-			<p class="need-suggestion"><i>Your comment should be <b>more specific</b>. Need some suggestions?</i></p>
-			<div id="scroll-box">
-				<div class="base-suggestions">
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Good job conveying important information"><br><br>
-					
-					<input type ="button" onclick="copyText(this)" class="suggest-btn" value="The large white gap at the bottom right is wasted."><br><br>
-
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like the inviting and appealing picture shows up first."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Love overall layout and the specific thought towards your audience"><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like how the text pops out in front of the pictures. It makes it visually appealing while also allowing the headers to stand out."><br><br>
-					
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The menu layout area looks bland and monotonous"><br><br>
-				</div>
-			</div>
-		</div>
-		<hr width=100%>
+		
 		<div class="comment-btns">
 			<button type="button" id="cancel-comment" onClick="window.location.reload()">
 				<p>Cancel</p></button>
@@ -140,7 +86,7 @@
 	</div>
  <div id="jumbotron">	
 	<div id="navbar">
-		<h1> CritiqueKit </h1>
+	<h1> CritiqueKit </h1>
  	</div>
  </div>
  	<iframe src="http://www.cottagelajolla.com/">		

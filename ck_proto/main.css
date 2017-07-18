@@ -116,6 +116,12 @@ iframe {
 	background-color: #696969;
 }
 
+#warntext{
+	text-align: right;
+	font-size: 14px;
+	padding-top: 15px;
+}
+
 input.suggest-btn {
 	-moz-appearance: none;
  	-webkit-appearance: none;
@@ -123,7 +129,7 @@ input.suggest-btn {
 	width: 98%;
 	white-space: normal;
 	/*height: 3em;*/
-	background-color: #D3D3D3;
+	background-color: #A9A9A9;
 	font-size: 14px;
 	text-align: left;
 
@@ -138,7 +144,7 @@ input.suggest-btn {
 	float: right;
 	margin-left: 5px;
 	bottom: 15px;
-	right: 5px;
+	right: 10px;
 	position: fixed;
 }
 
