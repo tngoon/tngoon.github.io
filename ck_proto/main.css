@@ -42,8 +42,9 @@ p {
 textarea {
 	width: 98%;
 	font-family: Arial;
-	height: 40px;
-	/*margin: auto;*/
+	font-size: 14px;
+	height: 30px;
+	margin: auto;
 }
 
 iframe {
@@ -147,7 +148,7 @@ input.suggest-btn {
 	bottom: 0;
 	right: 10px;
 	position: fixed;
-	width: 31%;
+	width: 30%;
 	background-color: #D3D3D3;
 	height: 50px;
 }
@@ -165,11 +166,12 @@ input.suggest-btn {
 
 .scroll-box {
 	background-color: #D3D3D3;
-	/*padding: 5px;*/
-	height: 200px;
+	padding: 5px;
+	height: 300px;
 	width: 98%;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	border: 1px solid black;
 }
 
 .warntext{
