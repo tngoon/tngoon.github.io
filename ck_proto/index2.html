@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="main.css" />
     <!--<script src="clickSuggestions.js"></script>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
-	<!--<script src="js/awarenessIndicators.js"></script>
-	<script src="js/clickSuggestions.js"></script>-->
+	<!--<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+	<script src="js/clickSuggestions.js"></script>
+	<script src="js/awarenessIndicators.js"></script>
 	
 </head>
 <body>
@@ -20,11 +19,10 @@
 		<h2>Feedback:</h2>
 		<div id="comments">
 			<textarea id='comment_text' placeholder='Type your feedback...'></textarea>
-			<p>Your comment should be...</p>
 			<div id="indicators">
-				<input type="checkbox" id="poscheck" value="positive" onclick="ShowHideDiv()">Is Specific
-				<input type="checkbox" id="speccheck" value="specific" onclick="ShowHideDiv()">Is Actionable
-				<input type="checkbox" id="probcheck" value="problem" onclick="ShowHideDiv()">Is Justified
+				<input type="checkbox" id="speccheck" value="specific" onclick="ShowHideDiv()">Is Specific
+				<input type="checkbox" id="actcheck" value="actionable" onclick="ShowHideDiv()">Is Actionable
+				<input type="checkbox" id="justcheck" value="justify" onclick="ShowHideDiv()">Is Justified
 			</div>
 		</div>
 		<div id="complete" style="display:none">
@@ -35,38 +33,73 @@
 			<p style="font-size: 14px"><b> Problem:</b></p>
 			<div class="scroll-box" id="base">
 				<div class="base-suggestions">
-
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Text is hard to read."><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The color contrast is rather stark."><br><br>
-
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Using sans-serif font for all items is a bit visually distracting."><br><br>
-
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Fonts are not consistent."><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Too many items in this navigation."><br><br>
-
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The fonts are too large here."><br><br>
-
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Too much black space."><br><br>
+				</div>
 			</div>
+			<p style="font-size: 14px"><b> Solution:</b></p>
 			<div class="scroll-box" id="base">
-					<p style="font-size: 14px"><b> Solution:</b></p>
-					
+				<div class="base-suggestions">	
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Spread out items or use a 2-column layout."><br><br>
-
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Text should be more uniform for a cleaner look."><br><br>
-
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Keep images static"><br><br>
-					
-
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Keep fonts consistent."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Reduce the size of images"><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Make more efficient use of your white space"><br><br>
+				</div>
 			</div>
+			<p style="font-size: 14px"><b> Positive:</b></p>
 			<div class="scroll-box" id="base">
-					<p style="font-size: 14px"><b> Positive:</b></p>
-					
+				<div class="base-suggestions">
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Overall, content on the site is clear."><br><br>
-
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like the header. It's very clear and easy to read."><br><br>
-
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The colors are very vibrant and work well."><br><br>
-					
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The colors are very vibrant and work well."><br><br>	
+				</div>
+			</div>
+		</div>
+		<div id="need-specific" style="display:none">
+			<p class="warntext">Your comment should be more <b>specific</b>. Need some suggestions?</p>
+			<div class="scroll-box">
+				<div class="base-suggestions">
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like how the text pops out in front of the pictures. It makes it visually appealing while also allowing the headers to stand out."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Good job conveying important information"><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like the header. It's very clear and easy to read."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The colors are very vibrant and work well."><br><br>	
+				</div>
+			</div>
+		</div>
+		<div id="need-actionable" style="display:none">
+			<p class="warntext">Your comment should be <b>actionable</b>. Need some suggestions?</p>
+			<div class="scroll-box">
+				<div class="base-suggestions">
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Maybe add a text shadow."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Removing the hover functionality might make the text easier to read."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A gradient overlay behind the text may help."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Use darker text."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Align the text better."><br><br>	
+				</div>
+			</div>
+		</div>
+		<div id="need-justify" style="display:none">
+			<p class="warntext">Your comment should be <b>justified</b>. Need some suggestions?</p>
+			<div class="scroll-box">
+				<div class="base-suggestions">
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The contrast makes text hard to read."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A shadow behind white text would make this easier to read."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The hover is jarring and makes the text hard to read."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Text is hard to read on the background"><br><br>	
+				</div>
+			</div>
+		</div>
+		<div id="act-justify" style="display:none">
+			<p class="warntext">Your comment should be <b>actionable and justified</b>. Need some suggestions?</p>
+			<div class="scroll-box">
+				<div class="base-suggestions">
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The contrast makes text hard to read. Maybe add a shadow."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Remove the image hover to make the text easier to read."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Keep text color the same to make it easier to read."><br><br>	
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A shadow behind white text would make this easier to read."><br><br>
 				</div>
 			</div>
 		</div>
