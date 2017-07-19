@@ -57,6 +57,7 @@ iframe {
 #jumbotron {
 	width: 105%;
 }
+
 #sidebar {
 	background-color: #D3D3D3;
 	padding: 10px;
@@ -79,9 +80,31 @@ iframe {
 	width: 65% ;
 }
 
+#help {
+	float: right;
+	margin-right: 5px;
+}
+
+#help div {
+	display: none;
+	font-size: 12px;
+}
+
+#help:hover div {
+	display: block;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.5);
+	color: #ffffff;
+	text-align: left;
+	position: absolute;
+	left: 0px;
+}
+
 #indicators {
 	font-family: Arial;
 	font-size: 14px;
+	cursor: pointer;
 }
 
 #complete-comment {
@@ -117,12 +140,28 @@ iframe {
 	height: 100px;
 }
 
-#actcheck {
-	margin-left: 50px;
+#specific p {
+	display: none;
 }
 
-#justcheck {
-	margin-left: 50px;
+#actionable {
+	margin-left: 40px;
+}
+
+#justify {
+	margin-left: 40px;
+}
+
+#justcheck p {
+	display: none;
+}
+
+#justcheck:hover p {
+	display: block;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.5);
+	color: #ffffff;
 }
 
 input.suggest-btn {

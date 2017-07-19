@@ -8,9 +8,9 @@ function ShowHideDiv() {
 	var actjust = document.getElementById("act-justify");
 
 	//checkboxes
-	var speccheck = document.getElementById("speccheck");
-	var actcheck = document.getElementById("actcheck");
-	var justcheck = document.getElementById("justcheck");
+	var speccheck = document.getElementById("specific");
+	var actcheck = document.getElementById("actionable");
+	var justcheck = document.getElementById("justify");
 
 	var submit = document.getElementById("submit-comment");
 

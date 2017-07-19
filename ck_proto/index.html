@@ -4,13 +4,13 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
     <title>CritiqueKit 1.5</title>
-    <!--<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />-->
     <link rel="stylesheet" href="main.css" />
+    <script src="https://use.fontawesome.com/824b7cc593.js"></script>
     <!--<script src="clickSuggestions.js"></script>-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 	<script src="js/clickSuggestions.js"></script>
 	<script src="js/awarenessIndicators.js"></script>
+	<script src="js/mouseover.js"></script>
 	
 </head>
 <body>
@@ -20,9 +20,18 @@
 		<div id="comments">
 			<textarea id='comment_text' placeholder='Type your feedback...'></textarea>
 			<div id="indicators">
-				<input type="checkbox" id="speccheck" value="specific" onclick="ShowHideDiv()">Is Specific
-				<input type="checkbox" id="actcheck" value="actionable" onclick="ShowHideDiv()">Is Actionable
-				<input type="checkbox" id="justcheck" value="justify" onclick="ShowHideDiv()">Is Justified
+				<input type="checkbox" id="specific" value="specific" onclick="ShowHideDiv()">Is Specific 
+				<input type="checkbox" id="actionable" value="actionable" onclick="ShowHideDiv()">Is Actionable
+				<input type="checkbox" id="justify" value="justify" onclick="ShowHideDiv()">Is Justified 
+				<div id="help">
+					<i class="fa fa-question-circle"></i>
+					<div>
+					<p style="font-size: 12px"> Your feedback should be...<br>
+					<li><b>Specific:</b> Feedback should provide sufficient detail for the receiver to understand what they did well or what they should improve.</li><br>
+					<li><b>Actionable:</b> Feedback should provide a concrete next step for the receiver to improve their work.</li><br>
+					<li><b>Justified:</b> Feedback should provide a reason for why a reviewer did something well or could improve upon something.</li>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="complete" style="display:none">
