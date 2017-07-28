@@ -59,7 +59,7 @@ iframe {
 }
 
 #sidebar {
-	background-color: #D3D3D3;
+	background-color: #DCDCDC;
 	padding: 10px;
 	position: absolute;
 	right: 0px;
@@ -140,20 +140,12 @@ iframe {
 	height: 150px;
 }
 
-#specific p {
-	display: none;
-}
-
 #actionable {
 	margin-left: 40px;
 }
 
 #justify {
 	margin-left: 40px;
-}
-
-#justcheck p {
-	display: none;
 }
 
 input.suggest-btn {
@@ -196,7 +188,7 @@ input.suggest-btn {
 }
 
 .scroll-box {
-	background-color: #D3D3D3;
+	background-color: #DCDCDC;
 	padding: 5px;
 	height: 300px;
 	width: 98%;
@@ -209,4 +201,9 @@ input.suggest-btn {
 	font-size: 14px;
 	font-style: italic;
 	color: #B22222;
+}
+
+.help-box{
+	-webkit-columns: 100px 3;
+	columns: 100px 3;
 }

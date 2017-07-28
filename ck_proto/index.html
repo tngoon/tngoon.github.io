@@ -3,11 +3,9 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
-    <title>CritiqueKit 1.5</title>
+    <title>CritiqueKit</title>
     <link rel="stylesheet" href="main.css" />
     <script src="https://use.fontawesome.com/824b7cc593.js"></script>
-    <!--<script src="clickSuggestions.js"></script>-->
-	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 	<script src="js/clickSuggestions.js"></script>
 	<script src="js/awarenessIndicators.js"></script>
 	<script src="js/mouseover.js"></script>
@@ -25,11 +23,10 @@
 				<input type="checkbox" id="justify" value="justify" onclick="ShowHideDiv()">Is Justified 
 				<div id="help">
 					<i class="fa fa-question-circle"></i>
-					<div>
-					<p> Your feedback should be...<br>
-					<li><b>Specific:</b> Feedback should provide sufficient detail for the receiver to understand what they did well or what they should improve.</li><br>
-					<li><b>Actionable:</b> Feedback should provide a concrete next step for the receiver to improve their work.</li><br>
-					<li><b>Justified:</b> Feedback should provide a reason for why a reviewer did something well or could improve upon something.</li>
+					<div class="help-box">
+						<p>Feedback should provide sufficient detail for the receiver to understand what they did well or what they should improve.</p>
+						<p>Feedback should provide a concrete next step for the receiver to improve their work.</p>
+						<p>Feedback should provide a reason for why a reviewer did something well or could improve upon something.</p>
 					</div>
 				</div>
 			</div>
@@ -38,13 +35,14 @@
 			<p id="complete-comment"><i>Your comment is complete!</i></p>
 		</div>
 		<div id="default-open">
-			<p class="need-suggestion" style="color: #000000"><i>First, identify something you like and something you wish about the design.</i></p>
+			<p class="need-suggestion" style="color: #000000"><i>First, identify something you like and something you wish about the design. Use the suggestions if you need help.</i></p>
 			<p style="font-size: 14px"><b> "I like":</b></p>
 			<div class="scroll-box" id="base">
 				<div class="base-suggestions">
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Colors are well contrasted."><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Layout of info is clear."><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Site is easy to navigate."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Good use of imagery on page."><br><br>
 				</div>
 			</div>
 			<p style="font-size: 14px"><b> "I wish":</b></p>
@@ -56,16 +54,6 @@
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Too many items in this navigation."><br><br>
 				</div>
 			</div>
-			<!-- <p style="font-size: 14px"><b> Solution:</b></p>
-			<div class="scroll-box" id="base">
-				<div class="base-suggestions">	
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Spread out items or use a 2-column layout."><br><br>
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Keep fonts consistent."><br><br>
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Reduce the size of images"><br><br>
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Make more efficient use of your white space"><br><br>
-				</div>
-			</div> -->
-			
 		</div>
 		<div id="need-specific" style="display:none">
 			<p class="warntext">Your comment should be more <b>specific</b>. Need some suggestions?</p>
@@ -95,7 +83,7 @@
 			<div class="scroll-box">
 				<div class="base-suggestions">
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The contrast makes text hard to read."><br><br>
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A shadow behind white text would make this easier to read."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The contrast makes the text hard to read."><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The hover is jarring and makes the text hard to read."><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Text is hard to read on the background"><br><br>	
 				</div>
@@ -106,8 +94,8 @@
 			<div class="scroll-box">
 				<div class="base-suggestions">
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The contrast makes text hard to read. Maybe add a shadow."><br><br>
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Remove the image hover to make the text easier to read."><br><br>
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Keep text color the same to make it easier to read."><br><br>	
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Brighter backgrounds should have darker foregrounds."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Making the text bigger and bolder will make it easier to read."><br><br>	
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="A shadow behind white text would make this easier to read."><br><br>
 				</div>
 			</div>
@@ -125,7 +113,7 @@
  	</div>
  </div> -->
  	<!-- <iframe src="http://www.cottagelajolla.com/"> -->
- 	<iframe src="https://phosphenesapp.herokuapp.com/home">		
+ 	<iframe src="http://www.cottagelajolla.com/">		
  </div>
  </body>
 </html>
