@@ -38,18 +38,25 @@
 			<p id="complete-comment"><i>Your comment is complete!</i></p>
 		</div>
 		<div id="default-open">
-			<p class="need-suggestion" style="color: #000000"><i>Need some feedback suggestions?</i></p>
-			<p style="font-size: 14px"><b> Problem:</b></p>
+			<p class="need-suggestion" style="color: #000000"><i>First, identify something you like and something you wish about the design.</i></p>
+			<p style="font-size: 14px"><b> "I like":</b></p>
+			<div class="scroll-box" id="base">
+				<div class="base-suggestions">
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Colors are well contrasted."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Layout of info is clear."><br><br>
+					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Site is easy to navigate."><br><br>
+				</div>
+			</div>
+			<p style="font-size: 14px"><b> "I wish":</b></p>
 			<div class="scroll-box" id="base">
 				<div class="base-suggestions">
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Text is hard to read."><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The color contrast is rather stark."><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Fonts are not consistent."><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Too many items in this navigation."><br><br>
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Too much black space."><br><br>
 				</div>
 			</div>
-			<p style="font-size: 14px"><b> Solution:</b></p>
+			<!-- <p style="font-size: 14px"><b> Solution:</b></p>
 			<div class="scroll-box" id="base">
 				<div class="base-suggestions">	
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Spread out items or use a 2-column layout."><br><br>
@@ -57,15 +64,8 @@
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Reduce the size of images"><br><br>
 					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Make more efficient use of your white space"><br><br>
 				</div>
-			</div>
-			<p style="font-size: 14px"><b> Positive:</b></p>
-			<div class="scroll-box" id="base">
-				<div class="base-suggestions">
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="Overall, content on the site is clear."><br><br>
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="I like the header. It's very clear and easy to read."><br><br>
-					<input type="button" onclick="copyText(this)" class="suggest-btn" value="The colors are very vibrant and work well."><br><br>	
-				</div>
-			</div>
+			</div> -->
+			
 		</div>
 		<div id="need-specific" style="display:none">
 			<p class="warntext">Your comment should be more <b>specific</b>. Need some suggestions?</p>
@@ -124,7 +124,8 @@
 	<h1> CritiqueKit </h1>
  	</div>
  </div> -->
- 	<iframe src="http://www.cottagelajolla.com/">		
+ 	<!-- <iframe src="http://www.cottagelajolla.com/"> -->
+ 	<iframe src="https://phosphenesapp.herokuapp.com/home">		
  </div>
  </body>
 </html>
