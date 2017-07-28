@@ -137,7 +137,7 @@ iframe {
 }
 
 #base {
-	height: 150px;
+	height: 125px;
 }
 
 #actionable {
@@ -146,6 +146,12 @@ iframe {
 
 #justify {
 	margin-left: 40px;
+}
+
+#complete-text {
+	font-size: 14px;
+	text-align: right;
+	padding-right: 10px;
 }
 
 input.suggest-btn {
@@ -172,8 +178,8 @@ input.suggest-btn {
 	right: 10px;
 	position: fixed;
 	width: 30%;
-	background-color: #D3D3D3;
-	height: 50px;
+	background-color: #DCDCDC;
+	height: 90px;
 }
 
 .text-right {
