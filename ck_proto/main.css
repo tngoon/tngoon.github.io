@@ -174,7 +174,7 @@ input.suggest-btn {
 
 .comment-btns {
 	margin-left: 5px;
-	bottom: 0;
+	bottom: 5px;
 	right: 10px;
 	position: fixed;
 	width: 30%;
