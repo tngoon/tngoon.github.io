@@ -1,3 +1,4 @@
+/*-----OVERALL-----*/
 html, body {
 	margin: 0;
 	padding: 0;
@@ -17,7 +18,6 @@ div {
 	vertical-align: baseline;
 }
 
-}
 h1 {
 	font-family: Arial;
 	font-size: 18px;
@@ -39,25 +39,48 @@ p {
 	font-size: 12px
 }
 
-textarea {
-	width: 98%;
-	font-family: Arial;
-	font-size: 14px;
-	height: 30px;
-	margin: auto;
+#container {
+	height: 100%;
 }
 
 iframe {
 	float: left;
 	width: 70%;
-	height: 100%;
+	height: 105%;
 	/*height: 1000px;*/
 }
 
+/*-------NAVBAR-------*/
 #jumbotron {
 	width: 105%;
 }
 
+#navbar {
+	padding-left: 10px;
+	background-color: #000000;
+	height: 40px;
+	width: 65%;
+	margin: 0;
+}
+
+#navbar li {
+	display: inline-block;
+	width: 50px;
+	font-family: Arial;
+	font-size: 20px;
+	color: #ffffff;
+	padding: 5px;
+}
+
+.text-right {
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+/*--------FEEDBACK SIDEBAR-------*/
 #sidebar {
 	background-color: #DCDCDC;
 	padding: 10px;
@@ -68,21 +91,37 @@ iframe {
 	/*height: 1025px;*/
 }
 
-#container {
-	height: 100%;
+textarea {
+	width: 98%;
+	font-family: Arial;
+	font-size: 14px;
+	height: 30px;
+	margin: auto;
 }
 
-#navbar {
-	padding-top: 5px;
-	padding-left: 10px;
-	background-color: #000000;
-	height: 50px;
-	width: 65% ;
+/*--------INDICATOR PANEL--------*/
+#indicators {
+	font-family: Arial;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#actionable {
+	margin-left: 40px;
+}
+
+#justify {
+	margin-left: 40px;
 }
 
 #help {
 	float: right;
 	margin-right: 5px;
+}
+
+.help-box{
+	-webkit-columns: 100px 3;
+	columns: 30% 3;
 }
 
 #help div {
@@ -101,20 +140,58 @@ iframe {
 	left: 0px;
 }
 
-#indicators {
-	font-family: Arial;
+/*------SUGGESTIONS BOX-------*/
+
+.warntext{
 	font-size: 14px;
+	font-style: italic;
+	color: #B22222;
+}
+
+.scroll-box {
+	background-color: #DCDCDC;
+	padding: 5px;
+	height: 300px;
+	width: 98%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	/*border: 1px solid black;*/
+}
+
+.need-suggestion {
+	color: #8B0000;
+	font-size: 16px;
+	/*font-weight: bold;*/
+}
+
+input.suggest-btn {
+	-moz-appearance: none;
+ 	-webkit-appearance: none;
+	appearance: none;
+	width: 98%;
+	white-space: normal;
+	/*height: 3em;*/
+	background-color: #A9A9A9;
+	font-size: 14px;
+	text-align: left;
 	cursor: pointer;
+}
+
+.suggest-btn:hover {
+	background-color: #696969;
+	color: #ffffff;
+}
+
+#base {
+	height: 125px;
 }
 
 #complete-comment {
 	color: #006400;
 	font-size: 16px;
 }
-/*#navbar a{
-	text-align: right;
-	color: #00CED1;
-}*/
+
+/*----SUBMIT COMMENT BUTTONS----*/
 
 #cancel-comment {
 	float: right;
@@ -136,80 +213,19 @@ iframe {
 	color: #ffffff;
 }
 
-#base {
-	height: 125px;
-}
-
-#actionable {
-	margin-left: 40px;
-}
-
-#justify {
-	margin-left: 40px;
-}
-
 #complete-text {
 	font-size: 14px;
 	text-align: right;
 	padding-right: 10px;
 }
 
-input.suggest-btn {
-	-moz-appearance: none;
- 	-webkit-appearance: none;
-	appearance: none;
-	width: 98%;
-	white-space: normal;
-	/*height: 3em;*/
-	background-color: #A9A9A9;
-	font-size: 14px;
-	text-align: left;
-	cursor: pointer;
-}
-
-.suggest-btn:hover {
-	background-color: #696969;
-	color: #ffffff;
-}
-
 .comment-btns {
 	margin-left: 5px;
 	bottom: 5px;
-	right: 10px;
+	right: 3px;
 	position: fixed;
-	width: 30%;
+	width: 31%;
 	background-color: #DCDCDC;
 	height: 90px;
 }
 
-.text-right {
-	float: right;
-	color: #ffffff;
-}
-
-.need-suggestion {
-	color: #8B0000;
-	font-size: 16px;
-	/*font-weight: bold;*/
-}
-
-.scroll-box {
-	background-color: #DCDCDC;
-	padding: 5px;
-	height: 300px;
-	width: 98%;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	/*border: 1px solid black;*/
-}
-
-.warntext{
-	font-size: 14px;
-	font-style: italic;
-	color: #B22222;
-}
-
-.help-box{
-	-webkit-columns: 100px 3;
-	columns: 100px 3;
-}
