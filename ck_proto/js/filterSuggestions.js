@@ -15,7 +15,7 @@ function filterSuggestions() {
 	}
 
 	clearTimeout(timeout);
-	if (timeout = setTimeout(function () {
+	timeout = setTimeout(function () {
 		document.getElementById("need-specific").style.display="block";
 		document.getElementById("default-open").style.display="none";
 		if (document.getElementById("specific").checked) {
