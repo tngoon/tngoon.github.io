@@ -22,8 +22,6 @@ function filterSuggestions() {
 			document.getElementById("need-specific").style.display="none";
 		}
 	}, 5000);
-
-
 }
 
 
