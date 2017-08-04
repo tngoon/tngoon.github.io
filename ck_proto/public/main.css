@@ -20,7 +20,8 @@ div {
 
 h3 {
 	font-family: Helvetica;
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 p {
@@ -30,17 +31,31 @@ p {
 
 /*----------CONTAINER--------*/
 
+#main-container {
+	height: 100%;
+}
+
 #navbar-container {
 	width: 70%;
+	padding: 0;
+	font-family: Helvetica;
+	/*position: absolute;*/
 }
 
 li.navbar-right {
 	right: 25px;
 }
 
-a.white-text {
-	color: #ffffff;
+#help_button {
 	font-style: normal;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#done_button {
+	font-style: normal;
+	font-size: 14px;
+	cursor: pointer;
 }
 
 iframe {
@@ -62,7 +77,7 @@ iframe {
 textarea {
 	width: 100%;
 	font-family: Helvetica;
-	font-size: 14px;
+	font-size: 12px;
 	height: 30px;
 	margin: auto;
 }
@@ -74,11 +89,13 @@ textarea {
 #submit-comment {
 	float: right;
 	margin-right: 10px;
+	font-family: Helvetica;
 }
 
 #cancel-comment {
 	float: right;
 	margin-right: 5px;
+	font-family: Helvetica;
 }
 
 #complete-text {
