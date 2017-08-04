@@ -30,6 +30,19 @@ p {
 
 /*----------CONTAINER--------*/
 
+#navbar-container {
+	width: 70%;
+}
+
+li.navbar-right {
+	right: 25px;
+}
+
+a.white-text {
+	color: #ffffff;
+	font-style: normal;
+}
+
 iframe {
 	float: left;
 	width: 70%;
@@ -47,7 +60,7 @@ iframe {
 }
 
 textarea {
-	width: 98%;
+	width: 100%;
 	font-family: Helvetica;
 	font-size: 14px;
 	height: 30px;
@@ -58,24 +71,14 @@ textarea {
 /*------------INDICATORS------------*/
 
 /*------------SUBMIT BUTTONS------------*/
+#submit-comment {
+	float: right;
+	margin-right: 10px;
+}
+
 #cancel-comment {
 	float: right;
 	margin-right: 5px;
-}
-
-#cancel-comment:hover {
-	color: #ffffff;
-	background-color: #696969;
-}
-
-#submit-comment {
-	background-color: #F08080;
-	float: right;
-	margin-right: 5px;
-}
-
-#submit-comment:hover {
-	color: #ffffff;
 }
 
 #complete-text {
@@ -87,9 +90,9 @@ textarea {
 .comment-btns {
 	margin-left: 5px;
 	bottom: 5px;
-	right: 3px;
+	right: 0px;
 	position: fixed;
-	width: 29%;
+	width: 30%;
 	background-color: #DCDCDC;
 	height: 90px;
 }

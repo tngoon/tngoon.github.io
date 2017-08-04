@@ -84,3 +84,8 @@ function filterSuggestions() {
 	// 	}
 	// }, 5000);
 }
+
+// load navbar in its place
+$(function() {
+	$("#navbar-container").load("../public/navbar.html")
+});

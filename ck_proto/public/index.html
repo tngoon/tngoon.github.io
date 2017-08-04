@@ -6,30 +6,52 @@
 	<title>CritiqueKit</title>
 	<link rel="stylesheet" href="main.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://use.fontawesome.com/824b7cc593.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../js/main.js"></script>
 </head>
 <body>
-	<div id="navbar-container"></div>
+	
 	<div id="sidebar" class="stretch">
 		<h3>Feedback:</h3>
 		<div id="comments">
 			<textarea id="comment-text" placeholder="Type your feedback..."></textarea>
 			<div id="indicators">
 				<div id="help"></div>
+				<div class="comment-btns">
+					<p id="complete-text">Make sure your comment is complete before submitting!</p>
+		  			<button type="button" id="submit-comment" class="btn btn-danger" onClick="window.location.reload()">Submit</button>
+		  			<button type="button" id="cancel-comment" class="btn btn-default" onClick="window.location.reload()">Cancel</button>
+				</div>
 			</div>
 		</div>
 		<div id="complete" style="display:none">
 			<p id="complete-comment"><i>Your comment is complete!<i></p>
 		</div>
 		<div id="dynasuggestions"></div>
-		<div class="comment-btns">
-			<p id="complete-text">Make sure your comment is complete before submitting!</p>
-			<button type="button" id="cancel-comment" onClick="window.location.reload()">
-				<p>Cancel</p></button>
-			<button type="button" id="submit-comment" onClick="window.location.reload()">
-				<p>Submit</p></button>
-		</div>
+		
+	</div>
+	<div id="navbar-container">
+		<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+			<ul class="nav navbar-nav">
+				<li>
+			    	<a href="" id="site_title" style="color: #ffffff; font-style: normal; font-size: 16px">CritiqueKit</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="navbar-right">
+			        <a id="help_button" data-toggle='modal' data-target='#help_modal' style="color: #ffffff">
+			          <span class="fa fa-question-circle"></span> Help
+			        </a>
+			    </li>
+			    <li class="navbar-right white-text">
+			        <a id="done_button" data-toggle='modal' data-target='#done_modal' style="color: #ffffff">
+			          <span class="fa fa-check-circle"></span> I'm done!
+			        </a>
+			    </li>
+			</ul>
+		</nav>
 	</div>
 	<iframe src="http://www.cottagelajolla.com/">
 </body>
