@@ -23,12 +23,3 @@ function filterSuggestions() {
 		}
 	}, 5000);
 }
-
-
-// var specific = document.getElementById("need-specific");
-	// var actionable = document.getElementById("need-actionable");
-	// var justified = document.getElementById("need-justify");
-	// var actjustify = document.getElementById("act-justify");
-	// var speccheck = document.getElementById("specific");
-	// var actcheck = document.getElementById("actionable");
-	// var justcheck = document.getElementById("justify");

@@ -1,1 +1,0 @@
-document.getElementById("speccheck").setAttribute("title","text to show");

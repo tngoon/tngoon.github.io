@@ -1,0 +1,95 @@
+/*-----------OVERALL---------*/
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	height: 100%;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+h3 {
+	font-family: Helvetica;
+	font-size: 14px;
+}
+
+p {
+	font-family: Helvetica;
+	font-size: 12px;
+}
+
+/*----------CONTAINER--------*/
+
+iframe {
+	float: left;
+	width: 70%;
+	height: 100%;
+}
+
+/*----------FEEDBACK SIDEBAR----------*/
+#sidebar {
+	background-color: #DCDCDC;
+	padding: 10px;
+	position: absolute;
+	right: 0px;
+	width: 30%;
+	height: 100%;
+}
+
+textarea {
+	width: 98%;
+	font-family: Helvetica;
+	font-size: 14px;
+	height: 30px;
+	margin: auto;
+}
+/*------------SUGGESTIONS BOX------------*/
+
+/*------------INDICATORS------------*/
+
+/*------------SUBMIT BUTTONS------------*/
+#cancel-comment {
+	float: right;
+	margin-right: 5px;
+}
+
+#cancel-comment:hover {
+	color: #ffffff;
+	background-color: #696969;
+}
+
+#submit-comment {
+	background-color: #F08080;
+	float: right;
+	margin-right: 5px;
+}
+
+#submit-comment:hover {
+	color: #ffffff;
+}
+
+#complete-text {
+	font-size: 14px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.comment-btns {
+	margin-left: 5px;
+	bottom: 5px;
+	right: 3px;
+	position: fixed;
+	width: 29%;
+	background-color: #DCDCDC;
+	height: 90px;
+}
