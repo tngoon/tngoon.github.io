@@ -85,7 +85,15 @@ function filterSuggestions() {
 	// }, 5000);
 }
 
-// load navbar in its place
+// load html files in correct divs
 $(function() {
 	$("#navbar-container").load("../public/navbar.html")
 });
+
+$(function() {
+	$("#indicators").load("../public/indicators.html")
+})
+
+// $(function() {
+// 	$("#help").load("../public/help.html")
+// })

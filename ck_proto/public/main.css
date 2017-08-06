@@ -5,6 +5,7 @@ html, body {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	font-family: Helvetica;
 	vertical-align: baseline;
 	height: 100%;
 }
@@ -19,13 +20,13 @@ div {
 }
 
 h3 {
-	font-family: Helvetica;
+	/*font-family: Helvetica;*/
 	font-size: 16px;
 	font-weight: bold;
 }
 
 p {
-	font-family: Helvetica;
+	/*font-family: Helvetica;*/
 	font-size: 12px;
 }
 
@@ -44,6 +45,10 @@ p {
 
 li.navbar-right {
 	right: 25px;
+}
+
+.navbar-default {
+	margin: 0;
 }
 
 #help_button {
@@ -76,16 +81,11 @@ iframe {
 
 textarea {
 	width: 100%;
-	font-family: Helvetica;
 	font-size: 12px;
 	height: 30px;
 	margin: auto;
 }
-/*------------SUGGESTIONS BOX------------*/
 
-/*------------INDICATORS------------*/
-
-/*------------SUBMIT BUTTONS------------*/
 #submit-comment {
 	float: right;
 	margin-right: 10px;
@@ -112,4 +112,11 @@ textarea {
 	width: 30%;
 	background-color: #DCDCDC;
 	height: 90px;
+}
+
+/*------------SUGGESTIONS BOX------------*/
+
+/*------------INDICATORS------------*/
+#checkboxes{
+	padding: 10px;
 }
