@@ -2,6 +2,10 @@
 function copyText(x) {
 		var currentTxt = document.getElementById("comment-text").value;
 		document.getElementById("comment-text").value = currentTxt + " " + x.innerHTML;
+		$("li").click(function() {
+  			$(this).parent().prepend($(this));
+  
+		});
 	}
 
 // show and hide different suggestions based on checkboxes
@@ -64,7 +68,7 @@ function ShowHideDiv() {
 	
 }
 
-// filter suggestions based on what user is typing
+//filter suggestions based on what user is typing
 function filterSuggestions() {
 	var input = document.getElementById("comment-text");
 	var box = document.getElementById("dynasuggestions");
@@ -74,23 +78,16 @@ function filterSuggestions() {
 
 	for (i=0; i<list.length; i++) {
 		a=list[i].getElementsByTagName("a")[0];
-		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			list[i].style.display= "";
-		} else {
-			list[i].style.display= "none";
-		}
+		if (a.innerHTML.toUpperCase().indexOf(filter) >= 0) {
+			// list[i].style.display= "";
+			list[i].parentNode.insertBefore(list[i], list[i].previousSibling);
+		} 
+		// else {
+		// 	list[i].style.display= "";
+		// 	// list[i].parentNode.insertAfter(list[i], list[i].nextSibling);
+		// }
 	}
 }
-
-	// clearTimeout(timeout);
-	// timeout = setTimeout(function () {
-	// 	document.getElementById("need-specific").style.display="block";
-	// 	document.getElementById("default-open").style.display="none";
-	// 	if (document.getElementById("specific").checked) {
-	// 		document.getElementById("need-specific").style.display="none";
-	// 	}
-	// }, 5000);
-// }
 
 // load html files in correct divs
 $(function() {
@@ -103,4 +100,8 @@ $(function() {
 
 $(function () {
 	$('#dynasuggestions').load("../public/dynasuggestions.html")
+})
+
+$(function () {
+	$('#help-modal').load("../public/help.html")
 })

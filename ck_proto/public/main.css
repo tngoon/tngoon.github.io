@@ -120,8 +120,15 @@ textarea {
 .scroll-box {
 	list-style-type: none;
 	padding: 0;
-	margin: 0;
+	margin: 5px;
 	height: 300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.base-scroll {
+	margin: 5px;
+	height: 200px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -130,8 +137,6 @@ textarea {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	overflow-y: scroll;
-	overflow-x: hidden;
 }
 
 #base li {
