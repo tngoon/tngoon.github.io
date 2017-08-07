@@ -1,7 +1,7 @@
 // copy text of suggestion button to textbox
 function copyText(x) {
-		var currentTxt = document.getElementById("comment_text").value;
-		document.getElementById("comment_text").value = currentTxt + " " + x.value;
+		var currentTxt = document.getElementById("comment-text").value;
+		document.getElementById("comment-text").value = currentTxt + " " + x.innerHTML;
 	}
 
 // show and hide different suggestions based on checkboxes
@@ -95,7 +95,7 @@ $(function() {
 });
 
 $(function () {
-	$('#dynasuggestions').load("../public/dynasuggestions.html")
+	$('#dynasuggestions').load("../public/default-suggestions.html")
 });
 
 // $(function() {
