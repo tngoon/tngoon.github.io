@@ -7,7 +7,7 @@ function copyText(x) {
 // show and hide different suggestions based on checkboxes
 function ShowHideDiv() {
 	//divs for different characteristics
-	var opendefault = document.getElementById("default-open");
+	var opendefault = document.getElementById("open-default");
 	var spec = document.getElementById("need-specific");
 	var action = document.getElementById("need-actionable");
 	var justify = document.getElementById("need-justify");
@@ -15,16 +15,17 @@ function ShowHideDiv() {
 	var actjust = document.getElementById("act-justify");
 
 	//checkboxes
-	var speccheck = document.getElementById("specific");
-	var actcheck = document.getElementById("actionable");
-	var justcheck = document.getElementById("justify");
+	var speccheck = document.getElementById("speccheck");
+	var actcheck = document.getElementById("actcheck");
+	var justcheck = document.getElementById("justcheck");
 
 	var submit = document.getElementById("submit-comment");
 
 	if(speccheck.checked && !actcheck.checked && !justcheck.checked) {
 		opendefault.style.display = "none";
 		actjust.style.display = "block";
-		submit.style.backgroundColor = "#F0E68C";
+		submit.classList.remove('btn-danger');
+		submit.classList.add('btn-warning');
 	 } else if(speccheck.checked && !justcheck.checked) {
 		complete.style.display = "none";
 		opendefault.style.display = "none";
@@ -32,7 +33,8 @@ function ShowHideDiv() {
 		spec.style.display = "none";
 		action.style.display = "none";
 		justify.style.display = "block";
-		submit.style.backgroundColor = "#F0E68C";
+		submit.classList.remove('btn-danger');
+		submit.classList.add('btn-warning');
 	} else if(speccheck.checked && !actcheck.checked) {
 		complete.style.display = "none";
 		opendefault.style.display = "none";
@@ -40,12 +42,14 @@ function ShowHideDiv() {
 		spec.style.display = "none";
 		justify.style.display = "none";
 		action.style.display = "block";
-		submit.style.backgroundColor = "#F0E68C";
+		submit.classList.remove('btn-danger');
+		submit.classList.add('btn-warning');
 	} else if(!speccheck.checked) {
 		complete.style.display = "none";
 		opendefault.style.display = "none";
 		spec.style.display = "block";
-		submit.style.backgroundColor = "#F0E68C";
+		submit.classList.remove('btn-danger');
+		submit.classList.add('btn-warning');
 	} else {
 		complete.style.display = "block";
 		opendefault.style.display = "none";
@@ -53,7 +57,9 @@ function ShowHideDiv() {
 		spec.style.display = "none";
 		justify.style.display = "none";
 		action.style.display = "none";
-		submit.style.backgroundColor = "#90EE90";
+		submit.classList.remove('btn-danger');
+		submit.classList.remove('btn-warning');
+		submit.classList.add('btn-success');
 	}
 	
 }
@@ -95,9 +101,5 @@ $(function() {
 });
 
 $(function () {
-	$('#dynasuggestions').load("../public/default-suggestions.html")
+	$('#dynasuggestions').load("../public/dynasuggestions.html")
 });
-
-// $(function() {
-// 	$("#help").load("../public/help.html")
-// })

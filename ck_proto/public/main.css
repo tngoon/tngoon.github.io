@@ -117,10 +117,21 @@ textarea {
 }
 
 /*------------SUGGESTIONS------------*/
+.scroll-box {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
 #base {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 #base li {
@@ -128,7 +139,7 @@ textarea {
 	font-size: 14px;
 }
 
-#open-default li a {
+#dynasuggestions li a {
     border: 1px solid #ddd; 
     margin-top: -1px; 
     background-color: #f6f6f6;
@@ -141,17 +152,24 @@ textarea {
 	font-size: 14px;
 }
 
-#open-default li a:hover {
+#dynasuggestions li a:hover {
     background-color: #696969;
     color: #ffffff; 
 }
+
+.warntext {
+	font-size: 14px;
+	font-style: italic;
+	color: #B22222;
+}
+
+#complete-comment {
+	color: #006400;
+	font-size: 16px;
+}
+
 /*------------INDICATORS------------*/
 #checkboxes{
 	padding: 10px;
 	font-size: 14px;
-}
-
-.scroll-box {
-	overflow-y: scroll;
-	overflow-x: hidden;
 }
