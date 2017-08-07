@@ -92,7 +92,11 @@ $(function() {
 
 $(function() {
 	$("#indicators").load("../public/indicators.html")
-})
+});
+
+$(function () {
+	$('#dynasuggestions').load("../public/dynasuggestions.html")
+});
 
 // $(function() {
 // 	$("#help").load("../public/help.html")

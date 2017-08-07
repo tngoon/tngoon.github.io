@@ -27,7 +27,8 @@ h3 {
 
 p {
 	/*font-family: Helvetica;*/
-	font-size: 12px;
+	font-size: 14px;
+	font-style: normal;
 }
 
 /*----------CONTAINER--------*/
@@ -51,13 +52,13 @@ li.navbar-right {
 	margin: 0;
 }
 
-#help_button {
+#help-button {
 	font-style: normal;
 	font-size: 14px;
 	cursor: pointer;
 }
 
-#done_button {
+#done-button {
 	font-style: normal;
 	font-size: 14px;
 	cursor: pointer;
@@ -102,6 +103,7 @@ textarea {
 	font-size: 14px;
 	text-align: right;
 	padding-right: 10px;
+	padding-top: 10px;
 }
 
 .comment-btns {
@@ -114,9 +116,42 @@ textarea {
 	height: 90px;
 }
 
-/*------------SUGGESTIONS BOX------------*/
+/*------------SUGGESTIONS------------*/
+#base {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
 
+#base li {
+	font-style: none;
+	font-size: 14px;
+}
+
+#open-default li a {
+    border: 1px solid #ddd; 
+    margin-top: -1px; 
+    background-color: #f6f6f6;
+    padding: 12px; 
+    text-decoration: none; 
+    font-size: 18px; 
+    color: black; 
+    display: block; 
+    font-style: normal;
+	font-size: 14px;
+}
+
+#open-default li a:hover {
+    background-color: #696969;
+    color: #ffffff; 
+}
 /*------------INDICATORS------------*/
 #checkboxes{
 	padding: 10px;
+	font-size: 14px;
+}
+
+.scroll-box {
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
