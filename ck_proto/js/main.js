@@ -66,20 +66,21 @@ function ShowHideDiv() {
 
 // filter suggestions based on what user is typing
 function filterSuggestions() {
-	var input = document.getElementById("comment_text");
+	var input = document.getElementById("comment-text");
 	var box = document.getElementById("dynasuggestions");
-	var list = box.getElementsByTagName("input");
+	var list = box.getElementsByTagName("li");
 	var filter = input.value.toUpperCase();
-	var timeout = null;
+	// var timeout = null;
 
 	for (i=0; i<list.length; i++) {
-		a=list[i].value;
-		if (a.toUpperCase().indexOf(filter) > 0) {
+		a=list[i].getElementsByTagName("a")[0];
+		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
 			list[i].style.display= "";
 		} else {
 			list[i].style.display= "none";
 		}
 	}
+}
 
 	// clearTimeout(timeout);
 	// timeout = setTimeout(function () {
@@ -89,7 +90,7 @@ function filterSuggestions() {
 	// 		document.getElementById("need-specific").style.display="none";
 	// 	}
 	// }, 5000);
-}
+// }
 
 // load html files in correct divs
 $(function() {
@@ -102,4 +103,4 @@ $(function() {
 
 $(function () {
 	$('#dynasuggestions').load("../public/dynasuggestions.html")
-});
+})
