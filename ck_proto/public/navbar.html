@@ -1,3 +1,10 @@
+<script>
+$('ol.carousel-indicators  li').on("click",function(){ 
+    $('ol.carousel-indicators li.active').removeClass("active");
+    $(this).addClass("active");
+});
+</script>
+
 <nav class="navbar navbar-default navbar-static-top navbar-inverse">
   <ul class="nav navbar-nav">
     <li>
@@ -6,14 +13,55 @@
   </ul>
   <ul class="nav navbar-nav navbar-right">
     <li class="navbar-right">
-      <a id="help-button" data-toggle='modal' data-target='#help-modal' style="color: #ffffff">
+      <a id="help-button" data-toggle="modal" data-target='#help-modal' style="color: #ffffff">
         <span class="fa fa-question-circle"></span> Help
       </a>
     </li>
     <li class="navbar-right">
-      <a id="done-button" data-toggle='modal' data-target='#done-modal' style="color: #ffffff">
+      <a id="done-button" data-toggle="modal" data-target='#done-modal' style="color: #ffffff">
         <span class="fa fa-check-circle"></span> I'm done!
       </a>
     </li>
   </ul>
 </nav>
+
+<!--Help modal-->
+<div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Welcome to CritiqueKit!</h4>
+      </div>
+      <div class="modal-body">
+        <div id="help-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner">
+            <div class="item active">
+              <p>CritiqueKit provides you with real-time categorization and feedback suggestions to help you give better feedback. To start, begin typing your feedback in the textbox.</p><br>
+              <img class="help-img" src="../images/textbox.png" style="height: auto; max-width: 75%; margin-left: auto; margin-right: auto"></img>
+            </div>
+            <div class="item">
+              <p>The checkboxes below the textbox automatically categorize your feedback into the characteristics of Specific, Actionable, and Justified as you type. Your goal is to make sure your feedback fits all three categories for the most helpful and complete feedback. You can hover over each checkbox to learn more about what each characteristic means.</p><br>
+              <img class="help-img" src="../images/categories.png" style="height: auto; max-width: 75%; margin-left: auto; margin-right: auto"></img>
+            </div>
+            <div class="item">
+              <p>If you need help or want some ideas from what others have previously said, you can select the suggestions in the suggestions box, which will directly copy to the textbox, where you can continue editing. These suggestions update with the categories to help you give complete feedback.</p>
+              <img class="help-img" src="../images/suggestions.png" style="height: auto; max-width: 75%; margin-left: auto; margin-right: auto"></img>
+            </div>
+            <div class="item">
+              <p>Once your feedback fits all the characteristics, CritiqueKit will tell you your feedback is complete, and the Submit button at the bottom of the page will turn green. Submit your comment, and move on to the next one or click the "I'm done!" button at the top of the page to finish giving feedback.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <ol class="carousel-indicators">
+          <li data-target="#help-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#help-carousel" data-slide-to="1"></li>
+          <li data-target="#help-carousel" data-slide-to="2"></li>
+          <li data-target="#help-carousel" data-slide-to="3"></li>
+        </ol>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
