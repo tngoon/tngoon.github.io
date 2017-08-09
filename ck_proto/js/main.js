@@ -101,3 +101,7 @@ $(function() {
 $(function () {
 	$('#dynasuggestions').load("../public/dynasuggestions.html")
 })
+
+$(function () {
+	$('#help-modal').load("../public/help.html")
+})
