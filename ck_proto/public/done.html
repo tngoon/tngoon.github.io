@@ -9,20 +9,9 @@
   <button type="button" class="btn btn-success" data-toggle="modal" id="fin-button">Yes, I'm done</button>
 </div>
 
-
-
-<div class="modal fade" id="final-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h4 class="modal-title">Thanks for using CritiqueKit!</h4>
-    </div>
-    <div class="modal-body">
-      <p>Thank you for participating in this study! If you could please take 5 minutes and go to this link to provide some feedback for CritiqueKit, please click <a href="#">here</a>.</p>
-      <p>You are now done with this study and may close this window</p> 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.close()">Close</button>
-      </div>
-    </div>
-  </div>
+<script>
+$("#fin-button").click(function() {
+  $('#done-modal').modal('hide');
+  $('#final-modal').modal('show');
+})
+</script>
