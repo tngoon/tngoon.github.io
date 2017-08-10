@@ -89,6 +89,7 @@ function filterSuggestions() {
 	}
 }
 
+//form validation to ensure consent form is clicked
 function validateForm(x) {
 	if(x.checked) {
 		document.getElementById("consent-button").classList.remove("disabled");
@@ -97,12 +98,18 @@ function validateForm(x) {
 	}
 }
 
-// load html files in correct divs
+//set cookie so modal will only show once on first load
 $(window).on('load', function() {
-	$('#consent-modal').modal('show');
-	$('#consent-modal').load("../public/consent.html");
+	if(!Cookies.get('modalShown')) {
+		$('#consent-modal').modal('show');
+		$('#consent-modal').load("../public/consent.html");
+		Cookies.set('modalShown', true, 2);
+	} else {
+		console.log("modal has been shown");
+	}
 })
 
+// load html files in correct divs
 $(function() {
 	$("#navbar-container").load("../public/navbar.html")
 });
