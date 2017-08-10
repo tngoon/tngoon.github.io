@@ -5,7 +5,7 @@
 		</div>
 		<div class="modal-body">
 			<p>Thank you for participating in this study! Please take a moment to reviewe the consent form below, and indicate your agreement to participate at the bottom.</p>
-			<div id="consent-form">
+			<div id="consent-info">
 				<h4>Informed Consent Form: Study of a learning system</h4>
 					<p>FOR QUESTIONS ABOUT THE STUDY, CONTACT: Scott Klemmer, 9500 Gilman Drive, La Jolla, CA 92093-0436, srk@ucsd.edu</p>
 					<p>DESCRIPTION: You are invited to participate in a research study on learning and creativity.
@@ -24,17 +24,17 @@
 					<p>RIGHT TO DISCONTINUE STUDY: The protocol director reserves the right to discontinue your participation in the study at any point for any reason.</p>
 			</div>
 			<br>
-			<form>
-				<input name="consent" id="consent_yes" type="radio">
+			<form id="consent-form">
+				<input name="consent" id="consent_yes" type="radio" onclick="validateForm(this)">
 					I am at least 18 years of age, and I consent to participating in this study.
 				</input><br/>
-				<input name="consent" id="consent_no" type="radio">
+				<input name="consent" id="consent_no" type="radio" onclick="validateForm(this)">
 					I do not consent to participating in this research study (or am under 18).
 				</input>
 			</form>
 		</div>
 		<div class="modal-footer">
-			<button class="btn btn-primary">Continue</button>
+			<button id="consent-button" class="btn btn-primary disabled" data-dismiss="modal">Continue</button>
 			<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
 		</div>
 	</div>

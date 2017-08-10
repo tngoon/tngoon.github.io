@@ -88,8 +88,16 @@ function filterSuggestions() {
 		// }
 	}
 }
-// load html files in correct divs
 
+function validateForm(x) {
+	if(x.checked) {
+		document.getElementById("consent-button").classList.remove("disabled");
+	} else {
+		return false;
+	}
+}
+
+// load html files in correct divs
 $(window).on('load', function() {
 	$('#consent-modal').modal('show');
 	$('#consent-modal').load("../public/consent.html");
@@ -110,14 +118,5 @@ $(function () {
 $(function () {
 	$('#help-modal').load("../public/help.html")
 })
-
-// $(function () {
-// 	$('#consent-modal').modal('show');
-// 	console.log('modal')
-// })
-
-// $(function () {
-// 	$('#consent-modal').load("../public/consent.html")
-// })
 
 
