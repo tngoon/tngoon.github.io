@@ -88,8 +88,13 @@ function filterSuggestions() {
 		// }
 	}
 }
-
 // load html files in correct divs
+
+$(window).on('load', function() {
+	$('#consent-modal').modal('show');
+	$('#consent-modal').load("../public/consent.html");
+})
+
 $(function() {
 	$("#navbar-container").load("../public/navbar.html")
 });
@@ -105,3 +110,14 @@ $(function () {
 $(function () {
 	$('#help-modal').load("../public/help.html")
 })
+
+// $(function () {
+// 	$('#consent-modal').modal('show');
+// 	console.log('modal')
+// })
+
+// $(function () {
+// 	$('#consent-modal').load("../public/consent.html")
+// })
+
+

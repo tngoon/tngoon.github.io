@@ -182,6 +182,13 @@ textarea {
 
 /*--------------MODALS-------------*/
 
+#consent-form {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 200px;
+	border: 1px solid;
+	padding: 5px; 
+}
 .modal-title {
 	font-style: normal;
 	font-weight: bold;
