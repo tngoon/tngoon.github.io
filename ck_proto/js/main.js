@@ -2,6 +2,7 @@
 function copyText(x) {
 		var currentTxt = document.getElementById("comment-text").value;
 		document.getElementById("comment-text").value = currentTxt + " " + x.innerHTML;
+		//if suggestion clicked, move to top of list
 		$("li").click(function() {
   			$(this).parent().prepend($(this));
   
@@ -111,19 +112,10 @@ $(window).on('load', function() {
 
 // load html files in correct divs
 $(function() {
-	$("#navbar-container").load("../public/navbar.html")
-});
-
-$(function() {
+	$("#navbar-container").load("../public/navbar.html");
 	$("#indicators").load("../public/indicators.html")
-});
-
-$(function () {
 	$('#dynasuggestions').load("../public/dynasuggestions.html")
-})
-
-$(function () {
 	$('#help-modal').load("../public/help.html")
-})
+});
 
 
