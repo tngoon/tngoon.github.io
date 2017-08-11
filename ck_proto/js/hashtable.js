@@ -1,4 +1,4 @@
-var getIndex = function(key, max) {
+function getIndex(key, max) {
 	var hash=0;
 	if(key.length == 0) return hash;
 	for (i=0; i<key.length; i++) {
@@ -9,7 +9,7 @@ var getIndex = function(key, max) {
 	return Math.abs(hash % max);
 };
 
-var insert = function (key, value) {
+function insert(key, value) {
 	if(typeof(key) === "undefined") {
 		throw("key is undefined")
 	}
@@ -17,7 +17,7 @@ var insert = function (key, value) {
 	storage[hashIndex] = value;
 }
 
-var retrieve = function(key) {
+function retrieve(key) {
 	var hashIndex = getIndex(key, max)
 	return storage[hashIndex];
 }
