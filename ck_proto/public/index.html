@@ -18,9 +18,13 @@
 	<div id="sidebar" class="stretch">
 		<h3>Feedback:</h3>
 		<div id="comments">
-			<textarea id="comment-text" onkeyup="filterSuggestions()" placeholder="Type your feedback..."></textarea>
+		<form enctype='application/json'>
+			<textarea name="comment" id="comment-text" onkeyup="filterSuggestions()" placeholder="Type your feedback..."></textarea>
+		</form>
 			<div id="indicators"></div>
 		</div>
+		<!--show submitted comments-->
+		<div id="submitted-comments" style="display:none"></div>
 		<div id="complete" style="display:none">
 			<p id="complete-comment"><i>Your comment is complete!<i></p>
 		</div>

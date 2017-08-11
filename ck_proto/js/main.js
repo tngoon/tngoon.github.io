@@ -69,6 +69,35 @@ function ShowHideDiv() {
 	
 }
 
+// function storeComments() {
+// 	$('#submit-comment').click(function() {
+// 		var input = $('#comment-text').val();
+// 		var newinput = input.replace(/\r?\n/g, '<br />');
+// 		var comments = [];
+
+// 	})
+// }
+// Store submitted comments and then show them in div
+// function showComments() {
+// 	$('#submit-comment').click(function() {
+// 		var input= $('#comment-text').val();
+// 		var comments = x; //whatever json file object
+// 		var output = $('#submitted-comments');
+
+// 		$.each(x, function() {
+// 			i=0;
+// 			x[i].comment = input;
+// 			output.append('comment:' + x[i].comment + '<button class="btn" onclick="editComment()>Edit</button>;');
+// 		});
+			//edit comment
+// 			i++;
+// 			function editComment() {
+// 				$('#comment-text').val(x[i].comment);
+// 			}
+
+// 	})
+// }
+
 //filter suggestions based on what user is typing
 function filterSuggestions() {
 	var input = document.getElementById("comment-text");
