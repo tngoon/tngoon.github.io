@@ -69,34 +69,30 @@ function ShowHideDiv() {
 	
 }
 
-// function storeComments() {
-// 	$('#submit-comment').click(function() {
-// 		var input = $('#comment-text').val();
-// 		var newinput = input.replace(/\r?\n/g, '<br />');
-// 		var comments = [];
+//store comments as JSON
+function storeComments() {
+	var input = $('#comment-text').val().split(/\n/);
+	var allComments = [];
 
-// 	})
-// }
-// Store submitted comments and then show them in div
-// function showComments() {
-// 	$('#submit-comment').click(function() {
-// 		var input= $('#comment-text').val();
-// 		var comments = x; //whatever json file object
-// 		var output = $('#submitted-comments');
+	for (var i=0; i < input.length; i++) {
+			if (/\S/.test(input[i])) {
+				allComments.push($.trim(input[i]));
+			}
+		}
+	allComments = JSON.stringify(allComments);
+	console.log(allComments);
+	$('#submitted-comments').append('Comment:' + input + '<hr>');
 
-// 		$.each(x, function() {
-// 			i=0;
-// 			x[i].comment = input;
-// 			output.append('comment:' + x[i].comment + '<button class="btn" onclick="editComment()>Edit</button>;');
-// 		});
-			//edit comment
-// 			i++;
-// 			function editComment() {
-// 				$('#comment-text').val(x[i].comment);
-// 			}
-
-// 	})
-// }
+	$("#comment-text").val('');
+	$("#open-default").show();
+	$("#complete").hide();
+	$("#need-specific").hide();
+	$("#need-actionable").hide();
+	$("#need-justify").hide();
+	$("#act-justify").hide();
+	$("#submit-comment").className = '';
+	$("#submit-comment").addClass('btn btn-danger');
+}
 
 //filter suggestions based on what user is typing
 function filterSuggestions() {
@@ -117,6 +113,19 @@ function filterSuggestions() {
 		// 	// list[i].parentNode.insertAfter(list[i], list[i].nextSibling);
 		// }
 	}
+}
+
+
+//show submitted comments
+function showComments() {
+	// $("#submitted-comments").show();
+	// $("#open-default").hide();
+	// $("#need-specific").hide();
+	// $("#need-actionable").hide();
+	// $("#need-justify").hide();
+	// $("#act-justify").hide();
+
+	$("#submitted-comments").toggleClass("hidden unhidden");
 }
 
 //form validation to ensure consent form is clicked

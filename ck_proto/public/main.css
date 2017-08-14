@@ -121,6 +121,18 @@ textarea {
 	margin-left: 10px;
 }
 
+#submitted-comments {
+	background-color: #DCDCDC;
+}
+
+.hidden {
+	display: none;
+}
+
+.unhidden {
+	display: block;
+}
+
 /*------------SUGGESTIONS------------*/
 .scroll-box {
 	list-style-type: none;
