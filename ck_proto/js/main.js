@@ -11,7 +11,8 @@ function copyText(x) {
 
 function checkComments() {
 	var text = $("#comment-text").val();
-	var words = text.split(' ').length;
+	var wordlength = text.split(' ').length;
+	var words = text.split(' ');
 	
 	//divs for different characteristics
 	var opendefault = document.getElementById("open-default");
@@ -29,70 +30,65 @@ function checkComments() {
 	var submit = document.getElementById("submit-comment");
 
 	setTimeout(function() {
-		if (words < 5) {
+		if (wordlength < 5) {
 			spec.style.display = "block";
 			opendefault.style.display = "none";
 		} else {
 			speccheck.checked = true;
 			spec.style.display = "none";
 			complete.style.display = "none";
+			opendefault.style.display = "none";
 		}
 	}, 3000);
 
-	var action_phrases = ["maybe try", "you should", "I would", "make"];
-	var just_phrases = ["because", "so", "so that", "in order to"];
-
-	if(speccheck.checked && !actcheck.checked && !justcheck.checked) {
-		opendefault.style.display="none";
-		spec.style.display="none";
-		actjust.style.display = "block";
-		submit.classList.remove('btn-danger');
-		submit.classList.add('btn-warning');
-	} else if(text.indexOf(action_phrases) != -1) {
+	if(text.match(/(maybe|try|should|would|make|use|consider|remove|use|add)/gi)) {
 		actcheck.checked = true;
 		opendefault.style.display = "none";
 		action.style.display = "none";
 		actjust.style.display = "none";
-		justify.style.display = "block";
-	} else if (text.indexOf(just_phrases) != -1) {
+	} 
+
+	if(text.match(/(because|so)/gi)) {
 		justcheck.checked = true;
 		opendefault.style.display = "none";
 		justify.style.display =  "none";
 		actjust.style.display = "none";
-	} else if (speccheck.checked && actcheck.checked && justcheck.checked) {
+	}
+
+	if(speccheck.checked && !actcheck.checked && !justcheck.checked) {
+		opendefault.style.display = "none";
+		action.style.display = "none";
+		actjust.style.display = "block";
+		justify.style.display = "none";
+		submit.classList.remove('btn-danger');
+		submit.classList.add('btn-warning');
+	} else if(actcheck.checked && !justcheck.checked) {
+		opendefault.style.display = "none";
+		action.style.display = "none";
+		actjust.style.display = "none";
+		justify.style.display = "block";
+		submit.classList.remove('btn-danger');
+		submit.classList.add('btn-warning');
+	} else if(!actcheck.checked && justcheck.checked) {
+		opendefault.style.display = "none";
+		action.style.display = "block";
+		justify.style.display = "none";
+		actjust.style.display = "none";
+		submit.classList.remove('btn-danger');
+		submit.classList.add('btn-warning');
+	} else if(actcheck.checked && speccheck.checked && justcheck.checked) {
 		complete.style.display = "block";
 		opendefault.style.display = "none";
+		action.style.display = "none";
 		actjust.style.display = "none";
 		spec.style.display = "none";
 		justify.style.display = "none";
 		action.style.display = "none";
+		submit.classList.remove('btn-warning');
 		submit.classList.remove('btn-danger');
-		submit.classList.remove('btn-warning');
 		submit.classList.add('btn-success');	
-	}	else {
-		opendefault.style.display = "block";
-		action.style.display = "none";
-		actjust.style.display = "none";
-		spec.style.display = "none";
-		justify.style.display = "none";
-		action.style.display = "none";
-		submit.classList.remove('btn-success');
-		submit.classList.remove('btn-warning');
-		submit.classList.add('btn-danger');	
-	}
+	} 
 }
-
-// function checkComments() {
-// 	var input = $("#comment-text").val();
-// 	var words = input.match(/\S+/g).length;
-// 	console.log(words);
-
-// 	if (words <= 5) {
-// 		document.getElementById("need-specific").style.display = "block";
-// 	} else {
-// 		document.getElementById("speccheck").checked;
-// 	}
-// }
 
 // show and hide different suggestions based on checkboxes
 function ShowHideDiv() {
@@ -174,9 +170,9 @@ function storeComments() {
 	console.log(obj);
 	localStorage.setItem("allComments", JSON.stringify(obj));
 	// Cookies.set("allComments", true, 1);
-
-	//reset textbox to blank
+	//reset textbox value to blank
 	$("#comment-text").val('');
+	
 	//hide all other divs and make Submit button red again
 	$("#open-default").show();
 	$("#complete").hide();
@@ -186,6 +182,9 @@ function storeComments() {
 	$("#act-justify").hide();
 	$("#submit-comment").className = '';
 	$("#submit-comment").addClass('btn btn-danger');
+	$("#speccheck").prop('checked', false);
+	$("#actcheck").prop('checked', false);
+	$("#justcheck").prop('checked', false);
 }
 
 //show submitted comments
@@ -198,8 +197,10 @@ function showComments() {
 	$("#act-justify").hide();
 	// var item = Cookies.getJSON('allComments');
 	var item = JSON.parse(localStorage.getItem("allComments"));
-	document.getElementById("submitted-comments").innerHTML = item.comment	
-	console.log(item.comment);
+	console.log(item)
+	$.each(item, function (key, value) {
+		$("#submitted-comments").append("Comment:" + item.comment);
+	})	
 }
 
 //filter suggestions based on what user is typing
@@ -212,7 +213,7 @@ function filterSuggestions() {
 
 	for (i=0; i<list.length; i++) {
 		a=list[i].getElementsByTagName("a")[0];
-		if (a.innerHTML.toUpperCase().indexOf(filter) >= 0) {
+		if (a.innerHTML.toUpperCase().indexOf(filter) >= -1) {
 			// list[i].style.display= "";
 			list[i].parentNode.insertBefore(list[i], list[i].previousSibling);
 		} 
