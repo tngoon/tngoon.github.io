@@ -32,7 +32,7 @@ function ShowHideDiv() {
 		submit.classList.remove('btn-danger');
 		submit.classList.add('btn-warning');
 	 } else if(speccheck.checked && !justcheck.checked) {
-		complete.style.display = "none";
+		complete.style.display = "none";;
 		opendefault.style.display = "none";
 		actjust.style.display = "none";
 		spec.style.display = "none";
@@ -65,14 +65,14 @@ function ShowHideDiv() {
 		submit.classList.remove('btn-danger');
 		submit.classList.remove('btn-warning');
 		submit.classList.add('btn-success');
-	}
-	
+	}	
 }
 
 //store comments as JSON
 function storeComments() {
 	var input = $('#comment-text').val().split(/\n/);
-	var allComments = localStorage.getItem("allComments");
+	// var allComments = localStorage.getItem("allComments");
+	var allComments = Cookies.get("allComents")
 	var comment = {};
 	var obj = [];
 
@@ -83,12 +83,14 @@ function storeComments() {
 	for (var i=0; i<input.length; i++) {
 		if(/\S/.test(input[i])) {
 			comment['comment'] = $.trim(input[i]);
+			$("#submitted-comments").append('Comment:' + obj + '<hr>');
 		}
 	}
 
 	obj.push(comment);
 	console.log(obj);
-	localStorage.setItem("allComments", JSON.stringify(obj));
+	// localStorage.setItem("allComments", JSON.stringify(obj));
+	Cookies.set("allComments", true, 1);
 
 	//reset textbox to blank
 	$("#comment-text").val('');
@@ -105,48 +107,16 @@ function storeComments() {
 
 //show submitted comments
 function showComments() {
-	// $("#submitted-comments").show();
-	// $("#open-default").hide();
-	// $("#need-specific").hide();
-	// $("#need-actionable").hide();
-	// $("#need-justify").hide();
-	// $("#act-justify").hide();
-	var item = JSON.parse(localStorage.getItem("allComments"));
+	$("#submitted-comments").show();
+	$("#open-default").hide();
+	$("#need-specific").hide();
+	$("#need-actionable").hide();
+	$("#need-justify").hide();
+	$("#act-justify").hide();
+	var item = JSON.parse(Cookies.get("allComments"));
+	// var item = JSON.parse(localStorage.getItem("allComments"));
 	console.log(item);
-	// $("#submitted-comments").toggleClass("hidden unhidden");
 }
-
-// function storeComments() {
-// 	var input = $('#comment-text').val().split(/\n/);
-// 	var allComments = [];
-// 	var comment = {};
-// 	var test = [];
-
-// 	for (var i=0; i < input.length; i++) {
-// 			if (/\S/.test(input[i])) {
-// 				comment['comment'] = $.trim(input[i]);
-// 			}
-// 		}
-
-// 	allComments.push(comment);
-// 	allComments = JSON.stringify(allComments);
-// 	console.log(allComments);
-
-// 	var test=[];
-// 	//$('#submitted-comments').append('Comment:' + input + '<hr>');
-
-// 	//reset textbox to blank
-// 	$("#comment-text").val('');
-// 	//hide all other divs and make Submit button red again
-// 	$("#open-default").show();
-// 	$("#complete").hide();
-// 	$("#need-specific").hide();
-// 	$("#need-actionable").hide();
-// 	$("#need-justify").hide();
-// 	$("#act-justify").hide();
-// 	$("#submit-comment").className = '';
-// 	$("#submit-comment").addClass('btn btn-danger');
-// }
 
 //filter suggestions based on what user is typing
 function filterSuggestions() {
