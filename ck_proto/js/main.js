@@ -41,6 +41,7 @@ function checkComments() {
 		}
 	}, 3000);
 
+	//auto-check based on keyword search
 	if(text.match(/(maybe|try|should|would|make|use|consider|remove|use|add)/gi)) {
 		actcheck.checked = true;
 		opendefault.style.display = "none";
@@ -54,7 +55,7 @@ function checkComments() {
 		justify.style.display =  "none";
 		actjust.style.display = "none";
 	}
-
+	//show/hide divs based on checkboxes
 	if(speccheck.checked && !actcheck.checked && !justcheck.checked) {
 		opendefault.style.display = "none";
 		action.style.display = "none";
@@ -153,21 +154,42 @@ function ShowHideDiv() {
 function storeComments() {
 	var input = $('#comment-text').val().split(/\n/);
 	var allComments = localStorage.getItem("allComments");
-	var comment = {};
+	var Comment = {};
 	var obj = [];
+
+	var speccheck = document.getElementById("speccheck");
+	var actcheck = document.getElementById("actcheck");
+	var justcheck = document.getElementById("justcheck");
 
 	if(allComments) {
 		obj=JSON.parse(allComments)
 	}
 
 	for (var i=0; i<input.length; i++) {
+		
 		if(/\S/.test(input[i])) {
-			comment['comment'] = $.trim(input[i]);
+			Comment['comment'] = $.trim(input[i]);
+			if(speccheck.checked && actcheck.checked && justcheck.checked) {
+				Comment['category'] = 111;
+			} else if(speccheck.checked && actcheck.checked) {
+				Comment['category']= 110;
+			} else if(speccheck.checked && justcheck.checked) {
+				Comment['category']= 101;
+			} else if(!speccheck.checked && actcheck.checked && !justcheck.checked) {
+				Comment['category']= 010;
+			} else if(!speccheck.checked && !actcheck.checked && justcheck.checked) {
+				Comment['category']= 101;
+			} else if(!speccheck.checked && actcheck.checked && justcheck.checked) {
+				Comment['category']= 011;
+			} else {
+				Comment['category']= 0;
+			}
 		}
+		
 	}
-	
-	obj.push(comment);
-	console.log(obj);
+	console.log(Comment.category)
+	obj.push(Comment);
+	console.log(Comment);
 	localStorage.setItem("allComments", JSON.stringify(obj));
 	// Cookies.set("allComments", true, 1);
 	//reset textbox value to blank
@@ -197,10 +219,19 @@ function showComments() {
 	$("#act-justify").hide();
 	// var item = Cookies.getJSON('allComments');
 	var item = JSON.parse(localStorage.getItem("allComments"));
-	console.log(item)
-	$.each(item, function (key, value) {
-		$("#submitted-comments").append("Comment:" + item.comment);
-	})	
+	console.log(item);
+	var submitted = '';
+	for(i = 0; i < item.length; i++) {
+		console.log(item[i].comment);
+		submitted += 'Comment: ' + item[i].comment + '<hr>'
+		// document.getElementById("submitted-comments").innerHTML = item[i].comment;
+		$("#submitted-comments").append(submitted);
+	}
+
+	$('#view-comments').text('- Hide my comments');
+	// $.each(item, function (key, value) {
+	// 	$("#submitted-comments").append("Comment:" + item.comment);
+	// })	
 }
 
 //filter suggestions based on what user is typing
@@ -209,18 +240,18 @@ function filterSuggestions() {
 	var box = document.getElementById("dynasuggestions");
 	var list = box.getElementsByTagName("li");
 	var filter = input.value.toUpperCase();
+	var words = $("#comment-text").val().split(' ');
 	// var timeout = null;
 
 	for (i=0; i<list.length; i++) {
 		a=list[i].getElementsByTagName("a")[0];
-		if (a.innerHTML.toUpperCase().indexOf(filter) >= -1) {
+		if (a.innerHTML.toUpperCase().match(words)) {
 			// list[i].style.display= "";
 			list[i].parentNode.insertBefore(list[i], list[i].previousSibling);
-		} 
-		// else {
-		// 	list[i].style.display= "";
-		// 	// list[i].parentNode.insertAfter(list[i], list[i].nextSibling);
-		// }
+		} else {
+			// list[i].style.display= "";
+			// list[i].parentNode.insertAfter(list[i], list[i].nextSibling);
+		}
 	}
 }
 
