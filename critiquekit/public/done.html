@@ -13,5 +13,6 @@
 $("#fin-button").click(function() {
   $('#done-modal').modal('hide');
   $('#final-modal').modal('show');
+  localStorage.removeItem("allComments");
 })
 </script>

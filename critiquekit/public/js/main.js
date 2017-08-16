@@ -67,7 +67,7 @@ function checkComments() {
 			complete.style.display = "none";
 			opendefault.style.display = "none";
 		}
-	}, 3000);
+	}, 5000);
 
 	//auto-check based on keyword search
 	if(text.match(/(maybe|try|should|would|make|use|consider|remove|use|add)/gi)) {
@@ -77,7 +77,7 @@ function checkComments() {
 		actjust.style.display = "none";
 	} 
 
-	if(text.match(/(because|so)/gi)) {
+	if(text.match(/(because|so|might|just)/gi)) {
 		justcheck.checked = true;
 		opendefault.style.display = "none";
 		justify.style.display =  "none";
@@ -182,7 +182,7 @@ function ShowHideDiv() {
 function storeComments() {
 	var file = 'comments.json'
 	var input = $('#comment-text').val().split(/\n/);
-	var allComments = localStorage.getItem("allComments");
+	var allComments = sessionStorage.getItem("allComments");
 	var Comment = {};
 	var obj = [];
 
@@ -220,12 +220,11 @@ function storeComments() {
 	console.log(Comment.category)
 	obj.push(Comment);
 	console.log(Comment);
-	localStorage.setItem("allComments", JSON.stringify(obj));
+	sessionStorage.setItem("allComments", JSON.stringify(obj));
+}
 
-	// Cookies.set("allComments", true, 1);
-
-	
-	//hide all other divs and make Submit button red again
+function resetPage() {
+	$("#comment-text").val('');
 	$("#open-default").show();
 	$("#complete").hide();
 	$("#need-specific").hide();
@@ -237,8 +236,8 @@ function storeComments() {
 	$("#actcheck").prop('checked', false);
 	$("#justcheck").prop('checked', false);
 	$("#speccheck").prop('checked', false);
-}
 
+}
 //show submitted comments
 function showComments() {
 	$("#submitted-comments").show();
@@ -248,7 +247,7 @@ function showComments() {
 	$("#need-justify").hide();
 	$("#act-justify").hide();
 	// var item = Cookies.getJSON('allComments');
-	var item = JSON.parse(localStorage.getItem("allComments"));
+	var item = JSON.parse(sessionStorage.getItem("allComments"));
 	console.log(item);
 	var submitted = '';
 
