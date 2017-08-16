@@ -169,6 +169,7 @@ function storeComments() {
 		
 		if(/\S/.test(input[i])) {
 			Comment['comment'] = $.trim(input[i]);
+
 			if(speccheck.checked && actcheck.checked && justcheck.checked) {
 				Comment['category'] = 111;
 			} else if(speccheck.checked && actcheck.checked) {
@@ -192,8 +193,7 @@ function storeComments() {
 	console.log(Comment);
 	localStorage.setItem("allComments", JSON.stringify(obj));
 	// Cookies.set("allComments", true, 1);
-	//reset textbox value to blank
-	$("#comment-text").val('');
+
 	
 	//hide all other divs and make Submit button red again
 	$("#open-default").show();
@@ -204,9 +204,9 @@ function storeComments() {
 	$("#act-justify").hide();
 	$("#submit-comment").className = '';
 	$("#submit-comment").addClass('btn btn-danger');
-	$("#speccheck").prop('checked', false);
 	$("#actcheck").prop('checked', false);
 	$("#justcheck").prop('checked', false);
+	$("#speccheck").prop('checked', false);
 }
 
 //show submitted comments
@@ -221,17 +221,13 @@ function showComments() {
 	var item = JSON.parse(localStorage.getItem("allComments"));
 	console.log(item);
 	var submitted = '';
+
 	for(i = 0; i < item.length; i++) {
 		console.log(item[i].comment);
-		submitted += 'Comment: ' + item[i].comment + '<hr>'
+		submitted = 'Comment: ' + item[i].comment + '<hr>'
 		// document.getElementById("submitted-comments").innerHTML = item[i].comment;
 		$("#submitted-comments").append(submitted);
 	}
-
-	$('#view-comments').text('- Hide my comments');
-	// $.each(item, function (key, value) {
-	// 	$("#submitted-comments").append("Comment:" + item.comment);
-	// })	
 }
 
 //filter suggestions based on what user is typing

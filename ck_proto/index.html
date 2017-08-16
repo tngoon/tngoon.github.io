@@ -12,7 +12,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
 	<script src="js/cookies.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/control.js"></script>
 </head>
 <body>
 	<div id="sidebar" class="stretch">
@@ -22,12 +22,13 @@
 				<textarea name="comment" id="comment-text" placeholder="Type your feedback..."></textarea>
 			</form>
 		</div>
+		<br></br>
 		<!--show submitted comments-->
-		<div id="submitted-comments" style="display:none"></div>
+		<div id="submitted-comments" style="display:none" class="scroll-box"></div>
 		<div class="comment-btns">
-			<a href="#" id="view-comments"><i class="fa fa-plus"></i> View my comments</a>
+			<a href="#" id="view-comments" onclick="showComments()"><i class="fa fa-plus"></i> View my comments</a>
 			<!-- <p id="complete-text">Make sure your comment is complete before submitting!</p> -->
-			<button type="button" id="submit-comment" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Make sure your feedback is complete before submitting!" onClick="window.location.reload()">Submit</button>
+			<button type="button" id="submit-comment" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Make sure your feedback is complete before submitting!" onClick="storeComments()">Submit</button>
 			<button type="button" id="cancel-comment" class="btn btn-default" onClick="window.location.reload()">Cancel</button>
 		</div>
 	</div>
@@ -104,8 +105,7 @@
 			        <h4 class="modal-title">Thanks for using CritiqueKit!</h4>
 			      </div>
 			      <div class="modal-body">
-			        <p>Thank you for participating in this study! If you could please take 5 minutes and go to this link to provide some feedback for CritiqueKit, please click <a href="#">here</a>.</p>
-			        <p>You are now done with this study and may close this window</p> 
+			         <p>Thank you for participating in this study. Do NOT yet close this window. Please contact your experimenter for further instructions and debriefing.</p>
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>

@@ -124,6 +124,8 @@ textarea {
 #submitted-comments {
 	background-color: #DCDCDC;
 	font-size: 14px;
+	border: 1px solid;
+	padding: 5px;
 }
 /*
 .hidden {
