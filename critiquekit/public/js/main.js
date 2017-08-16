@@ -61,13 +61,16 @@ function checkComments() {
 		if (wordlength < 5) {
 			spec.style.display = "block";
 			opendefault.style.display = "none";
-		} else {
+		} else if (wordlength > 5) {
 			speccheck.checked = true;
 			spec.style.display = "none";
 			complete.style.display = "none";
 			opendefault.style.display = "none";
+		} else {
+			opendefault.style.display = "block";
+			speccheck.checked = false;
 		}
-	}, 5000);
+	}, 4000);
 
 	//auto-check based on keyword search
 	if(text.match(/(maybe|try|should|would|make|use|consider|remove|use|add)/gi)) {
@@ -238,6 +241,7 @@ function resetPage() {
 	$("#speccheck").prop('checked', false);
 
 }
+
 //show submitted comments
 function showComments() {
 	$("#submitted-comments").show();
