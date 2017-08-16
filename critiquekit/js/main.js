@@ -1,3 +1,31 @@
+//set cookie so modal will only show once on first load
+$(window).on('load', function() {
+	if(!Cookies.get('modalShown')) {
+		$('#consent-modal').modal('show');
+		$('#consent-modal').load("../public/consent.html");
+		Cookies.set('modalShown', true, 2);
+	} else {
+		console.log("modal has been shown");
+	}
+})
+
+// load html files in correct divs
+$(function() {
+	$("#navbar-container").load("../public/navbar.html");
+	$("#indicators").load("../public/indicators.html")
+	$('#dynasuggestions').load("../public/dynasuggestions.html")
+	$('#help-modal').load("../public/help.html")
+});
+
+//form validation to ensure consent form is clicked
+function validateForm(x) {
+	if(x.checked) {
+		document.getElementById("consent-button").classList.remove("disabled");
+	} else {
+		return false;
+	}
+}
+
 // copy text of suggestion button to textbox
 function copyText(x) {
 		var currentTxt = document.getElementById("comment-text").value;
@@ -250,33 +278,4 @@ function filterSuggestions() {
 		}
 	}
 }
-
-//form validation to ensure consent form is clicked
-function validateForm(x) {
-	if(x.checked) {
-		document.getElementById("consent-button").classList.remove("disabled");
-	} else {
-		return false;
-	}
-}
-
-//set cookie so modal will only show once on first load
-$(window).on('load', function() {
-	if(!Cookies.get('modalShown')) {
-		$('#consent-modal').modal('show');
-		$('#consent-modal').load("../public/consent.html");
-		Cookies.set('modalShown', true, 2);
-	} else {
-		console.log("modal has been shown");
-	}
-})
-
-// load html files in correct divs
-$(function() {
-	$("#navbar-container").load("../public/navbar.html");
-	$("#indicators").load("../public/indicators.html")
-	$('#dynasuggestions').load("../public/dynasuggestions.html")
-	$('#help-modal').load("../public/help.html")
-});
-
 
