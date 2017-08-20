@@ -23,14 +23,6 @@ $(function() {
 
 });
 
-function clicklist() {
-	$(this).click(function() {
-		$('#speccheck').prop('checked', true);
-		console.log('working');
-	})
-}
-
-
 //form validation to ensure consent form is clicked
 function validateForm(x) {
 	if(x.checked) {
@@ -47,17 +39,15 @@ function copyText(x) {
 		//if suggestion clicked, move to top of list
 		$("li").click(function() {
   			$(this).parent().prepend($(this));
+
   			//check boxes if suggestion checked fits these categories
-  			if ($(this).parent('#specific')) {
+  			if ($(this).parent('#specific').length) {
   				$("#speccheck").prop('checked', true);
-  			} 
-  			if($(this).parent('#action')) {
+  			} else if ($(this).parent('#action').length) {
   				$("#actcheck").prop('checked', true);
-  			} 
-  			if($(this).parent('#justify')) {
+  			} else if ($(this).parent('#justify').length) {
   				$("#justcheck").prop('checked', true);
-  			} 
-  			if($(this).parent('#actjust')) {
+  			} else if($(this).parent('#actjust').length) {
   				$("#actcheck").prop('checked', true);
   				$("#justcheck").prop('checked', true);
   			}
@@ -99,7 +89,7 @@ function checkComments() {
 			opendefault.style.display = "block";
 			speccheck.checked = false;
 		}
-		if(text.match(/(maybe|try|should|would|make|use|consider|remove|use|add)/gi)) {
+		if(text.match(/(^maybe$|^try$|^should$|^would$|^make$|^use$|^consider$|^remove$|^use$|^add$)/gi)) {
 			actcheck.checked = true;
 			opendefault.style.display = "none";
 			action.style.display = "none";
@@ -299,7 +289,7 @@ function showComments() {
 
 	for(i = 0; i < item.length; i++) {
 		console.log(item[i].comment);
-		submitted = 'Comment: ' + item[i].comment + '<hr>'
+		submitted = item[i].comment + '<hr>'
 		// document.getElementById("submitted-comments").innerHTML = item[i].comment;
 		$("#submitted-comments").append(submitted);
 	}
