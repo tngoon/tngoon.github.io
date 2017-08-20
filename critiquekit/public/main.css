@@ -153,13 +153,13 @@ textarea {
 	overflow-x: hidden;
 }
 
-#base {
+.base {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
 
-#base li {
+li.base {
 	font-style: none;
 	font-size: 14px;
 }

@@ -2,7 +2,7 @@
 $(window).on('load', function() {
 	if(!Cookies.get('modalShown')) {
 		$('#consent-modal').modal('show');
-		$('#consent-modal').load("../public/consent.html");
+		$('#consent-modal').load("../consent.html");
 		Cookies.set('modalShown', true, 2);
 	} else {
 		console.log("modal has been shown");
@@ -16,6 +16,32 @@ $(function() {
 	$('#dynasuggestions').load("../dynasuggestions.html")
 	$('#help-modal').load("../help.html")
 });
+
+$(function() {
+	$("#specific li").click(function() {
+		$("#speccheck").prop('checked', true);
+		console.log('working')
+	});
+	// $("#action li").click(function() {
+	// 	$("#actcheck").prop('checked', true);
+	// });
+	// $("#justify li").click(function() {
+	// 	$("#justcheck").prop('checked', true);
+	// })
+})
+
+function clicklist() {
+	$(this).click(function() {
+		document.getElementById("speccheck").checked = true;
+		console.log('working');
+	})
+}
+$(function() {
+	$("#specific li").click(function () {
+		document.getElementById("speccheck").checked = true;
+		console.log('working');
+	})
+})
 
 //form validation to ensure consent form is clicked
 function validateForm(x) {
@@ -36,6 +62,8 @@ function copyText(x) {
   
 		});
 	}
+
+
 
 function checkComments() {
 	var text = $("#comment-text").val();
@@ -283,4 +311,7 @@ function filterSuggestions() {
 		}
 	}
 }
+
+
+
 
