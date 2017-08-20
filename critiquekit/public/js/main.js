@@ -2,7 +2,8 @@
 $(window).on('load', function() {
 	if(!Cookies.get('modalShown')) {
 		$('#consent-modal').modal('show');
-		$('#consent-modal').load("../consent.html");
+		$('#consent-modal').load("consent.html");
+		// $('#consent-modal').load("../consent.html");
 		Cookies.set('modalShown', true, 2);
 	} else {
 		console.log("modal has been shown");
@@ -11,37 +12,24 @@ $(window).on('load', function() {
 
 // load html files in correct divs
 $(function() {
-	$("#navbar-container").load("../navbar.html");
-	$("#indicators").load("../indicators.html")
-	$('#dynasuggestions').load("../dynasuggestions.html")
-	$('#help-modal').load("../help.html")
-});
+	$("#navbar-container").load("navbar.html");
+	$("#indicators").load("indicators.html")
+	$('#dynasuggestions').load("dynasuggestions.html")
+	$('#help-modal').load("help.html")
+	// $("#navbar-container").load("../navbar.html");
+	// $("#indicators").load("../indicators.html")
+	// $('#dynasuggestions').load("../dynasuggestions.html")
+	// $('#help-modal').load("../help.html")
 
-$(function() {
-	$("#specific li").click(function() {
-		$("#speccheck").prop('checked', true);
-		console.log('working')
-	});
-	// $("#action li").click(function() {
-	// 	$("#actcheck").prop('checked', true);
-	// });
-	// $("#justify li").click(function() {
-	// 	$("#justcheck").prop('checked', true);
-	// })
-})
+});
 
 function clicklist() {
 	$(this).click(function() {
-		document.getElementById("speccheck").checked = true;
+		$('#speccheck').prop('checked', true);
 		console.log('working');
 	})
 }
-$(function() {
-	$("#specific li").click(function () {
-		document.getElementById("speccheck").checked = true;
-		console.log('working');
-	})
-})
+
 
 //form validation to ensure consent form is clicked
 function validateForm(x) {
@@ -59,7 +47,20 @@ function copyText(x) {
 		//if suggestion clicked, move to top of list
 		$("li").click(function() {
   			$(this).parent().prepend($(this));
-  
+  			//check boxes if suggestion checked fits these categories
+  			if ($(this).parent('#specific')) {
+  				$("#speccheck").prop('checked', true);
+  			} 
+  			if($(this).parent('#action')) {
+  				$("#actcheck").prop('checked', true);
+  			} 
+  			if($(this).parent('#justify')) {
+  				$("#justcheck").prop('checked', true);
+  			} 
+  			if($(this).parent('#actjust')) {
+  				$("#actcheck").prop('checked', true);
+  				$("#justcheck").prop('checked', true);
+  			}
 		});
 	}
 
@@ -98,22 +99,35 @@ function checkComments() {
 			opendefault.style.display = "block";
 			speccheck.checked = false;
 		}
-	}, 4000);
+		if(text.match(/(maybe|try|should|would|make|use|consider|remove|use|add)/gi)) {
+			actcheck.checked = true;
+			opendefault.style.display = "none";
+			action.style.display = "none";
+			actjust.style.display = "none";
+		} 
+
+		if(text.match(/(because|so|might|just)/gi)) {
+			justcheck.checked = true;
+			opendefault.style.display = "none";
+			justify.style.display =  "none";
+			actjust.style.display = "none";
+		}
+	}, 3500);
 
 	//auto-check based on keyword search
-	if(text.match(/(maybe|try|should|would|make|use|consider|remove|use|add)/gi)) {
-		actcheck.checked = true;
-		opendefault.style.display = "none";
-		action.style.display = "none";
-		actjust.style.display = "none";
-	} 
+	// if(text.match(/(maybe|try|should|would|make|use|consider|remove|use|add)/gi)) {
+	// 	actcheck.checked = true;
+	// 	opendefault.style.display = "none";
+	// 	action.style.display = "none";
+	// 	actjust.style.display = "none";
+	// } 
 
-	if(text.match(/(because|so|might|just)/gi)) {
-		justcheck.checked = true;
-		opendefault.style.display = "none";
-		justify.style.display =  "none";
-		actjust.style.display = "none";
-	}
+	// if(text.match(/(because|so|might|just)/gi)) {
+	// 	justcheck.checked = true;
+	// 	opendefault.style.display = "none";
+	// 	justify.style.display =  "none";
+	// 	actjust.style.display = "none";
+	// }
 	//show/hide divs based on checkboxes
 	if(speccheck.checked && !actcheck.checked && !justcheck.checked) {
 		opendefault.style.display = "none";
@@ -312,6 +326,12 @@ function filterSuggestions() {
 	}
 }
 
+$(function() {
+	$('#specific').click(function () {
+		// $('#speccheck').prop('checked', true);
+		console.log('working');
+	})
+})
 
 
 
