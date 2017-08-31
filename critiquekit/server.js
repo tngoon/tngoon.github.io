@@ -1,10 +1,12 @@
 var http=require('http');
 var express=require('express');
 var jsonfile=require('jsonfile');
+var path = require('path');
 const PORT = process.env.PORT || 8080;
 const path = require('path');
-const INDEX = path.join(__dirname, '/public');
 
+const INDEX = path.join(__dirname, '/public');
+const CONTROL = path.join(__dirname)
 const server = express()
 		.use(express.static(__dirname + '/public'))
 		.listen(PORT, () => console.log('Listening on ${PORT}'));
@@ -19,5 +21,3 @@ function updateJSON(file, obj) {
 		console.error(err);
 	});
 }
-
-// updateJSON(comments.json)
