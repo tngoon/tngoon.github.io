@@ -1555,7 +1555,7 @@
 	}
 
 	body, input, select, textarea {
-		color: #888;
+		color: #000000;
 		font-family: "Lato", sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -1568,17 +1568,17 @@
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: solid 1px #e4e4e4;
-		color: inherit;
+		color: #000000;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #cd5c5c !important;
+			color: #0000FF !important;
 		}
 
 	strong, b {
-		color: #777;
+		color: #000000;
 		font-weight: 700;
 	}
 
@@ -1591,7 +1591,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #cd5c5c;
+		color: #191970;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
@@ -1734,7 +1734,7 @@
 	}
 
 	header.major h2 {
-		color: #cd5c5c;
+		color: #191970;
 		font-size: 3.5em;
 	}
 
@@ -2473,8 +2473,8 @@
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		/*background: #4acaa8;*/
-		background: #cd5c5c;
-		color: #cd5c5c;
+		background: #191970;
+		color: #191970;
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
@@ -2562,7 +2562,7 @@
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #cd5c5c;
+					border-top: solid 2px #191970;
 					display: block;
 					padding: 0;
 				}
@@ -2580,9 +2580,9 @@
 					}
 
 						#header > nav ul li a.active {
-							background: #fff;
+							background: #B0C4DE;
 							/* color: #4acaa8 !important;*/
-							color: #cd5c5c !important;
+							color: #000000 !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -2819,7 +2819,7 @@
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #000000;
+				background: #191970;
 				color: #fff;
 				min-width: 320px;
 			}
