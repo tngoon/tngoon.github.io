@@ -48,6 +48,11 @@ li.navbar-right {
 	right: 25px;
 }
 
+#next_design {
+	font-style: normal;
+	font-color: #ffffff;
+	cursor: pointer;
+}
 .navbar-default {
 	margin: 0;
 }
@@ -122,10 +127,13 @@ textarea {
 }
 
 #submitted-comments {
-	background-color: #DCDCDC;
-	font-size: 14px;
-	/*border: 1px solid;*/
+	border: 1px solid #ddd; 
 	padding: 5px;
+    background-color: #f6f6f6;
+    color: black; 
+    display: block; 
+    font-style: normal;
+	font-size: 14px;
 }
 /*
 .hidden {
@@ -148,7 +156,7 @@ textarea {
 
 .base-scroll {
 	margin: 5px;
-	height: 150px;
+	height: 125px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -191,6 +199,14 @@ li.base {
 #complete-comment {
 	color: #006400;
 	font-size: 16px;
+}
+
+.SearchBar {
+	padding: 5px;
+}
+
+.comment-list {
+	list-style-type: none;
 }
 
 /*------------INDICATORS------------*/

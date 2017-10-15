@@ -1,0 +1,68 @@
+{
+    "logs": [
+        {
+            "time": 1508047333022,
+            "user": "0.221561701854412261508047332920",
+            "event": "new connection"
+        },
+        {
+            "time": 1508047747271,
+            "condition": "critiquekit",
+            "user": "0.221561701854412261508047332920",
+            "event": "clicked categories",
+            "categories": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "time": 1508047749832,
+            "condition": "critiquekit",
+            "user": "0.221561701854412261508047332920",
+            "event": "clicked categories",
+            "categories": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "time": 1508047787062,
+            "condition": "critiquekit",
+            "user": "0.221561701854412261508047332920",
+            "event": "submitted comment",
+            "comment": "This is a great prototype. I think it could use a sans serif font for the headers because this is pretty standard."
+        },
+        {
+            "time": 1508047805915,
+            "condition": "critiquekit",
+            "user": "0.221561701854412261508047332920",
+            "event": "showed comments"
+        },
+        {
+            "time": 1508047875225,
+            "condition": "critiquekit",
+            "user": "0.221561701854412261508047332920",
+            "event": "clicked categories",
+            "categories": [
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "time": 1508047876687,
+            "condition": "critiquekit",
+            "user": "0.221561701854412261508047332920",
+            "event": "submitted comment",
+            "comment": "While the layout is quite nice in that it follows a grid format, I am not sure what \"text editor\" means or why \"page options\" is one of the main menu items. You could probably put those in a settings page or something similar."
+        },
+        {
+            "time": 1508047884439,
+            "condition": "critiquekit",
+            "user": "0.221561701854412261508047332920",
+            "event": "clicked next design"
+        }
+    ]
+}
