@@ -1574,6 +1574,9 @@
 		color: #000000;
 		text-decoration: none;
 	}
+	.projectpics {
+		height: 250px;
+	}
 
 		a:hover {
 			border-bottom-color: transparent;
