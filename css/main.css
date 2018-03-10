@@ -72,8 +72,8 @@ h2 {
       margin: auto auto 0;
       padding: 0.5rem; }
       #sideNav .navbar-brand .img-profile {
-        width: 125px;
-        height: 10rem;
+       /* width: 120px;
+        height: 9.5rem;*/
         border: 0.5rem solid rgba(255, 255, 255, 0.2); }
     #sideNav .navbar-collapse {
       display: flex;
