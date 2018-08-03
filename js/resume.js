@@ -26,3 +26,12 @@
   });
 
 })(jQuery); // End of use strict
+
+$('#resume').click(resumeClick);
+
+function resumeClick(e) {
+  e.preventDefault();
+  gtag('create', 'UA-123326761-1', 'auto');
+  gtag('send','event','link','click','resume view');
+  console.log("checking if this works");
+}
