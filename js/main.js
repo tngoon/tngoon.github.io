@@ -8,6 +8,6 @@ $("#resume").click(resumeClick);
 function resumeClick(e) {
    console.log("this worked");
    e.preventDefault();
-   gtag('create','UA-123326761-1','auto');
-   gtag('send','event','button','click');
+   ga('create','UA-123326761-1','auto');
+   ga('send','event','button','click');
  }
