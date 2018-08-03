@@ -10,5 +10,4 @@ function resumeClick(e) {
    console.log("this worked");
    gtag('create','UA-123326761-1','auto');
    gtag('send','event','link','click');
-   });
  }
