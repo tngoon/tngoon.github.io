@@ -4,8 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 body {
-  /*font-family: 'Open Sans', serif;*/
-  font-family: 'Avenir', serif;
+  font-family: 'Open Sans', serif;
+  /*font-family: 'Avenir', serif;*/
   padding-top: 54px;
   color: #000000; }
 
@@ -20,8 +20,8 @@ h3,
 h4,
 h5,
 h6 {
-  /*font-family: 'Saira Extra Condensed', serif;*/
-  font-family: 'Avenir Next Condensed', serif;
+  font-family: 'Saira Extra Condensed', serif;
+  /*font-family: 'Avenir Next Condensed', serif;*/
   font-weight: 700;
   text-transform: uppercase;
   color: #343a40; }
