@@ -54,6 +54,11 @@ h2 {
 
 ; }
 
+.scrollbox{
+  overflow: auto;
+  height: 300px;
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   text-transform: uppercase; }
