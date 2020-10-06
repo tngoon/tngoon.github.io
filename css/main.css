@@ -56,7 +56,8 @@ h2 {
 
 .scrollbox{
   overflow: auto;
-  height: 200px;
+  height: 20%;
+  width: 100%;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
