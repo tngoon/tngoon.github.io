@@ -54,6 +54,9 @@ h2 {
 
 ; }
 
+span{
+  content: "\00F6";
+}
 .scrollbox{
   overflow: auto;
   height: 20%;
