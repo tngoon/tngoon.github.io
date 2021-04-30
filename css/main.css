@@ -59,7 +59,7 @@ span{
 }
 .scrollbox{
   overflow: auto;
-  height: 20%;
+  height: 300px;
   width: 100%;
 }
 
