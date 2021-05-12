@@ -50,7 +50,7 @@ h2 {
 .list-icons {
   font-size: 3rem; }
   .list-icons .list-inline-item i:hover {
-    color: #006A96
+    color: #8B0000
 
 ; }
 
@@ -113,17 +113,17 @@ section.resume-section {
     padding-bottom: 3rem !important; } }
 
 .bg-primary {
-    background-color: #006A96
+    background-color: #8B0000
 
  !important; }
 
 .text-primary {
-  color: #006A96
+  color: #8B0000
 
  !important; }
 
 a {
-  color: #006A96
+  color: #8B0000
 
 ; }
   a:hover, a:focus, a:active {
